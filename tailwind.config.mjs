@@ -12,7 +12,7 @@ export default {
 
       /* Font Sizes */
       fontSize: {
-        custom54: ["3.375rem"], // 54px
+        custom54: ["3.375rem", { lineHeight: "1.25" }], // 54px
         custom40: ["2.5rem"], // 40px
         custom32: ["2rem"], // 32px
       },
@@ -66,6 +66,20 @@ export default {
           800: "#A13B18",
           900: "#521E0D",
           950: "#281007",
+        },
+
+        SalmonTreat: {
+          50: "#FDF0F1",
+          100: "#FBE1E2",
+          200: "#F9C9CB",
+          300: "#F6ABAD",
+          400: "#F38D90",
+          500: "#F17275",
+          600: "#ED262B",
+          700: "#CB0000",
+          800: "#890102",
+          900: "#420103",
+          950: "#200102",
         },
       },
 

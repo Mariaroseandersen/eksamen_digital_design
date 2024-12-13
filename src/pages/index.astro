@@ -5,7 +5,7 @@ import Link from "../components/Link.astro";
 import Kinetic from "../components/Kinetic.astro";
 import Howitworks from "../components/Howitworks.astro";
 import { Image } from "astro:assets";
-import thumbsup from "../assets/images/thumbsup.png";
+import whytails from "../assets/images/WhyTails.webp";
 ---
 
 <MainLayout title="Tails.com" />
@@ -14,7 +14,18 @@ import thumbsup from "../assets/images/thumbsup.png";
 
 <Kinetic />
 
-<section id="whytails"></section>
+
+<section class="mx-5 md:mx-custom104 mb-44 md:grid grid-cols-2 gap-custom90" id="whytails">
+  <div><h1 class="text-2xl md:text-custom54 font-paytone md:max-w-3xl pb-6 md:pb-16 uppercase">Why Should You Pick Tails.com?</h1>
+  <p class="pb-6 text-xs md:text-base">Better digestion, shinier coats, stronger joints and more – it’s all in the bag with a recipe designed just for your dog.</p>
+  <p class="pb-6 text-xs md:text-base">Packed with tasty, high-quality ingredients, every bite is perfectly balanced with the good stuff they need, from protein and vitamins to tail-waggingly good flavor.</p>
+  <p class="pb-6 text-xs md:text-base">And the best part? We deliver it right to your door every month. Treats? Covered. Advice? Our friendly care team is always here to help.</p>
+  <p class="pb-8 md:pb-12 text-xs md:text-base">Kibble is king! Crunchy, satisfying, and great for their teeth – no added sugar or artificial nasties. A little goes a long way to keep them happy and healthy.</p>
+  <Button>Get Meal Plan</Button></div>
+  <div><Image src={whytails} alt="tails"/> </div>
+  
+  
+</section>
 
 <Howitworks />
 

@@ -1,5 +1,53 @@
 ---
+
+---
+
+<!-- <div>
+    <button class="border-2 border-black"><slot /></button>
+</div> --><!-- ---
+// Få adgang til `variant`, `size`, og `href` fra props
+const { variant = "primary", size = "medium", href } = Astro.props;
+
+// Definér knap-styling
+const buttonStyling = "py-5 px-6 rounded-lg border-2 md transition ease-in-out uppercase";
+const variantClasses = {
+  primary: "text-[var(--offwhite)] border-[var(--orange)] hover:bg-[var(--orange)]",
+  secondary: "text-[var(--offwhite)] border-[var(--orange)] hover:bg-[var(--orange)]",
+  outlined: "text-[var(--greendark)] border-[var(--orange)] hover:bg-[var(--orange)] hover:text-[var(--greendark)]",
+};
+const sizeClasses = {
+  large: "text-4xl",
+  medium: "text-2xl",
+  small: "text-xs",
+};
+---
+
+<div>
+  {
+    href ? (
+      <a href={href} class:list={[buttonStyling, variantClasses[variant], sizeClasses[size]]}>
+        <slot />
+      </a>
+    ) : (
+      <button class:list={[buttonStyling, variantClasses[variant], sizeClasses[size]]}>
+        <slot />
+      </button>
+    )
+  }
+</div> --><!-- ---
+const { variant = "primary", size = "medium" } = Astro.props;
+const buttonStyling = "text-[var(--offwhite)] py-5 px-6 rounded-lg border-2 border-[var(--orange)] rounded md transition ease-in-out uppercase";
+const variantClasses = {
+    "primary": "hover:bg-[var(--orange)]",
+    "secondary": ""
+};
+
+const sizeClasses = {
+    "large": "text-4xl",
+    "medium":"text-2xl",
+    "small":"text-xs"
+};
 ---
 <div>
-    <button class="border-2 border-black"><slot /></button>
-</div>
+    <button class:list={[buttonStyling, variantClasses[variant], sizeClasses[size]]}><slot /></button>
+</div> --><!-- <Button variant="primary" size="small">Deltag her</Button> -->

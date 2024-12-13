@@ -1,139 +1,83 @@
 /** @type {import('tailwindcss').Config} */
 export default {
-	content: ['./src/**/*.{astro,html,js,jsx,md,mdx,svelte,ts,tsx,vue}'],
+  content: ["./src/**/*.{astro,html,js,jsx,md,mdx,svelte,ts,tsx,vue}"],
 
-    /* Vil du overskrive eller extende tailwinds indstillinger?  */
+  theme: {
+    extend: {
+      /* Font Family */
+      fontFamily: {
+        poppins: ["Poppins", "sans-serif"],
+        paytone: ["Paytone One", "sans-serif"],
+      },
 
-	theme: {
+      /* Font Sizes */
+      fontSize: {
+        custom54: ["3.375rem"], // 54px
+        custom40: ["2.5rem"], // 40px
+        custom32: ["2rem"], // 32px
+      },
 
-        /* Tilføj din egen farvepalette nedenfor */
-        // colors: {
-        //     transparent: 'transparent',
-        //     current: 'currentColor',
-        //     'farvenavn': {
-        //         50: '#hexkode',     
-        //         100: '#hexkode',
-        //         200: '#hexkode',
-        //         300: '#hexkode',
-        //         400: '#hexkode',
-        //         500: '#hexkode',
-        //         600: '#hexkode',
-        //         700: '#hexkode',
-        //         800: '#hexkode',
-        //         900: '#hexkode',
-        //     },
-        //     'white': '#fff',
-        //     'black': '#000',
-        // },
+      /* Corner Radius */
+      borderRadius: {
+        custom50px: "50px",
+      },
 
-         /* Tilføj din egen spacing nedenfor */
-        // spacing: {
-        //     'm': '40px',
-        // },
-
-        /* Tilføj fonte herunder - husk også at tilføje webfonte i head-sektionen i MainLayout  */
-        // fontFamily: {
-        //     sans: ['Prompt', 'sans-serif'],
-        //     'display': ['Courier', 'monospace'], /* eksempel på ekstra font */
-        // },
-
-        /* Tilføj dit typografiske hierarki herunder */
-        // fontSize: {
-        //     base: ['1rem', { lineHeight: '1.5rem' }],
-        //     large: ['2.5rem', { lineHeight: '3.75rem' }],
-        //   },
-
-        /* Tilføj dit fontvægt-hierarki nedenfor */
-        //   fontWeight: {
-        //     regular: '400',
-        //   },
-
-        /* Borders - borderstørrelser herunder */
-        // borderWidth: {
-        //     DEFAULT: '1px',
-        //     0: '0px',
-        //     2: '2px',
-        // },
-
-        /* Border radius størrelser herunder */
-        // borderRadius: {
-        //     DEFAULT: '1.25rem',
-        //     none: '0px',
-        // },
-
-        /* Box shadows herunder */
-        // boxShadow: {
-        //     drop25: '4px 4px 4px 0 rgb(0 0 0 / 0.25)', /* x y blur spread farve / opacity */  
-        // },
-
-		extend: {
-
-        /* Tilføj din egen farvepalette nedenfor */
-        // colors: {
-        //     transparent: 'transparent',
-        //     current: 'currentColor',
-        //     'farvenavn': {
-        //         50: '#hexkode',     
-        //         100: '#hexkode',
-        //         200: '#hexkode',
-        //         300: '#hexkode',
-        //         400: '#hexkode',
-        //         500: '#hexkode',
-        //         600: '#hexkode',
-        //         700: '#hexkode',
-        //         800: '#hexkode',
-        //         900: '#hexkode',
-        //     },
-        //     'white': '#fff',
-        //     'black': '#000',
-        // },
-
-         /* Tilføj din egen spacing nedenfor */
-        // spacing: {
-        //     'm': '40px',
-        // },
-
-        /* Tilføj fonte herunder - husk også at tilføje webfonte i head-sektionen i MainLayout  */
-        // fontFamily: {
-        //     sans: ['Prompt', 'sans-serif'],
-        //     'display': ['Courier', 'monospace'], /* eksempel på ekstra font */
-        // },
-
-        /* Tilføj dit typografiske hierarki herunder */
-        // fontSize: {
-        //     base: ['1rem', { lineHeight: '1.5rem' }],
-        //     large: ['2.5rem', { lineHeight: '3.75rem' }],
-        //   },
-
-        /* Tilføj dit fontvægt-hierarki nedenfor */
-        //   fontWeight: {
-        //     regular: '400',
-        //   },
-
-        /* Borders - borderstørrelser herunder */
-        // borderWidth: {
-        //     DEFAULT: '1px',
-        //     0: '0px',
-        //     2: '2px',
-        // },
-
-        /* Border radius størrelser herunder */
-        // borderRadius: {
-        //     DEFAULT: '1.25rem',
-        //     none: '0px',
-        // },
-
-        /* Box shadows herunder */
-        // boxShadow: {
-        //     drop25: '4px 4px 4px 0 rgb(0 0 0 / 0.25)', /* x y blur spread farve / opacity */  
-        // },
-
+      /* Colors */
+      colors: {
+        transparent: "transparent",
+        current: "currentColor",
+        BarkingAtTheMoon: {
+          opacity50: "#E2EBF4",
+          50: "#E2EBF4",
+          100: "#C6D6EA",
+          200: "#89ABD3",
+          300: "#5283BD",
+          400: "#35577F",
+          500: "#1C2E44",
+          600: "#162435",
+          700: "#111C29",
+          800: "#0B121A",
+          900: "#060A0F",
+          950: "#030507",
         },
-	},
-	plugins: [
-        require('@tailwindcss/typography'),
-        require('@tailwindcss/forms'),
-        require('@tailwindcss/aspect-ratio'),
-        require('@tailwindcss/container-queries'),
-    ],
-}
+
+        GoldenRetriever: {
+          100: "#FEFAF6",
+          200: "#FCF3E6",
+          300: "#FBEEDD",
+          400: "#FAE9D3",
+          500: "#F9E3C8",
+          600: "#F0B670",
+          700: "#E68A00",
+          800: "#A05B00",
+          900: "#522F01",
+          950: "#291801",
+        },
+
+        FluffyCloud: {
+          50: "#FFFFFF",
+          100: "#FFFFFF",
+          200: "#FEFBFB",
+          300: "#FEFBFB",
+          400: "#FCF8F6",
+          500: "#FCF6F4",
+          600: "#E9B19F",
+          700: "#D76C4A",
+          800: "#A13B18",
+          900: "#521E0D",
+          950: "#281007",
+        },
+      },
+
+      spacing: {
+        custom90: "90px",
+        custom104: "104px",
+      },
+    },
+
+    boxShadow: {
+      dropshadow: "0 4px 4px rgba(89, 89, 89, 0.25)",
+    },
+  },
+  plugins: [require("@tailwindcss/typography"), require("@tailwindcss/forms"), require("@tailwindcss/aspect-ratio"), require("@tailwindcss/container-queries")],
+};

@@ -1,6 +1,8 @@
 ---
 import MainLayout from "../layouts/MainLayout.astro";
 import Button from "../components/Button.astro";
+import { Image } from "astro:assets";
+import dogform from "../assets/images/dogform.webp";
 ---
 
 <MainLayout title="Tails.com" />
@@ -38,5 +40,11 @@ import Button from "../components/Button.astro";
     </h3>
   </div>
   <Button variant="primary">Continue</Button>
+</section>
+<section class="bg-SalmonTreat-200 mt-20">
+  <div class="mx-5 md:mx-custom104 grid grid-cols-2">
+    <Image src={dogform} alt="picture of dog peeking up" class="w-[250px] h-auto" />
+    <p class="pt-12 font-medium">Don’t worry, if you have more than one dog, you can add another dog later.</p>
+  </div>
 </section>
 <MainLayout />

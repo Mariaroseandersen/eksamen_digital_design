@@ -10,17 +10,30 @@ import Quote from "../components/Quote.astro";
 import Subscription from "../components/Subscription.astro";
 import { Image } from "astro:assets";
 import whytails from "../assets/images/WhyTails.webp";
+import herodog1 from "../assets/images/herodog1.webp";
 ---
 
 <MainLayout title="Tails.com" />
 
-<section id="hero"><h1>Hero</h1></section>
+<section id="hero" class="mx-5 md:mx-custom104 lg:grid grid-cols-2">
+  <div>
+    <h1 class="text-5xl md:text-8xl font-paytone uppercase md:max-w-3xl pb-8 md:pb-16">Real Food for Real Friends</h1>
+    <p class="md:text-2xl pb-8 md:pb-16 md:max-w-2xl">
+      We craft <strong>unique recipes</strong> tailored to your dog’s needs. Backed by science and delivered to your door each month through our easy subscription, your dog gets the <strong>perfect meals</strong>, right on time.
+      <div class="flex gap-8 pb-8"><Button>Try It Now</Button><Button>Learn more</Button></div>
+    </p>
+  </div>
+
+  <div>
+    <Image src={herodog1} alt="dog portrait" />
+  </div>
+</section>
 
 <Kinetic />
 
 <section class="mx-5 md:mx-custom104 mb-44 md:grid grid-cols-2 gap-custom90" id="whytails">
   <div>
-    <h1 class="text-2xl md:text-custom54 font-paytone md:max-w-3xl pb-6 md:pb-16 uppercase">Why Should You Pick Tails.com?</h1>
+    <h2 class="text-2xl md:text-custom54 font-paytone md:max-w-3xl pb-6 md:pb-16 uppercase">Why Should You Pick Tails.com?</h2>
     <p class="pb-6 text-xs md:text-base">Better digestion, shinier coats, stronger joints and more – it’s all in the bag with a recipe designed just for your dog.</p>
     <p class="pb-6 text-xs md:text-base">Packed with tasty, high-quality ingredients, every bite is perfectly balanced with the good stuff they need, from protein and vitamins to tail-waggingly good flavor.</p>
     <p class="pb-6 text-xs md:text-base">And the best part? We deliver it right to your door every month. Treats? Covered. Advice? Our friendly care team is always here to help.</p>

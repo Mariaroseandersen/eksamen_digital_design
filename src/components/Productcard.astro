@@ -1,0 +1,9 @@
+---
+const { productname = "", cardimage = "" } = Astro.props;
+import Button from "./Button.astro";
+---
+
+<article id="productcard" class="rounded-custom50px bg-cover bg-center bg-no-repeat p-6 flex flex-col justify-center items-center text-center w-[300px] sm:w-auto h-[410px]" style={{ backgroundImage: `url(${cardimage})` }}>
+  <p class="text-2xl md:text-custom32 font-bold uppercase pb-44">{productname}</p>
+  <Button variant="primary">Read More</Button>
+</article>

@@ -4,6 +4,7 @@ import Button from "../components/Button.astro";
 import Link from "../components/Link.astro";
 import { Image } from "astro:assets";
 import thumbsup from "../assets/images/thumbsup.png";
+import betteringredients from "../assets/images/betteringredients.webp";
 import Ourproducts from "../components/Ourproducts.astro";
 import Quote from "../components/Quote.astro";
 import Addons from "../components/Addons.astro";
@@ -15,7 +16,16 @@ import Subscription from "../components/Subscription.astro";
 
 <section id="themenuhero"></section>
 
-<section id="betteringredients"></section>
+<section class="mx-5 md:mx-custom104 mb-44 md:grid grid-cols-2 gap-custom90" id="betteringredients">
+<div>
+    <h2 class="text-2xl md:text-custom54 font-paytone md:max-w-3xl pb-6 md:pb-16 uppercase">Better ingredients mean tastier food</h2>
+    <p class="pb-6 text-xs md:text-base">At tails.com, we carefully craft every recipe with ingredients that matter. From premium meats and <strong>fish</strong> packed with <strong>protein</strong> and <strong>essential fatty acids</strong> to <strong>wholesome vegetables</strong> and <strong>grains</strong> that provide <strong>energy</strong> and <strong>fiber</strong>, every element supports your dog’s health and well-being.</p>
+    <p class="pb-6 text-xs md:text-base">We also include <strong>vitamins</strong>, <strong>minerals</strong>, and <strong>prebiotics</strong> to boost immunity, aid digestion, and support healthy joints. The result is a balanced, delicious meal tailored to your dog’s specific needs, ensuring they stay happy, healthy, and full of energy every day.</p>
+    <p class="pb-8 md:pb-12 text-xs md:text-base">All our ingredients are sourced in the UK and the EU.</p>
+
+  </div>
+  <div><Image src={betteringredients} alt="tails" /></div>
+</section>
 
 <Ourproducts />
 

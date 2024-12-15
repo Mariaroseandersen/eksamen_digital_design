@@ -1,0 +1,9 @@
+---
+const { cardname = "", dogbreed = "", dogreview = "", cardimage = "", cardimagealt = "" } = Astro.props;
+---
+
+<div id="card" class="bg-GoldenRetriever-100">
+ 
+    <img src={cardimage} alt={cardimagealt} class="" />
+    <h3>{cardname}</h3>
+</div>

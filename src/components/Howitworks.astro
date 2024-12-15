@@ -1,0 +1,48 @@
+---
+import { Image } from "astro:assets";
+import step1 from "../assets/images/step.svg";
+import number1 from "../assets/images/number1.svg";
+import step2 from "../assets/images/step2.svg";
+import number2 from "../assets/images/number2.svg";
+import step3 from "../assets/images/step3.svg";
+import number3 from "../assets/images/number3.svg";
+import treats from "../assets/images/dogtreats.webp";
+import Button from "../components/Button.astro";
+---
+
+<section class="mx-5 md:mx-custom104">
+  <h2 class="text-2xl md:text-custom54 font-paytone md:max-w-3xl pb-6 md:pb-16 uppercase">How it works</h2>
+  <p class="pb-6 md:max-w-2xl">Three easy steps to ensure a lifelong healthy food plan for your best friend. We adapt their recipe as they grow</p>
+  <div class="sm:grid sm:grid-cols-2 md:grid-cols-3 gap-32 mb-12">
+    <article class="flex flex-col items-center justify-center text-center">
+      <Image src={step1} alt="dog illustration" class="pb-6 w-40 h-auto" />
+      <Image src={number1} alt="step 1" class="pb-6 md:pb-16 w-20 h-auto" />
+      <h3 class="text-2xl md:text-custom32 font-bold pb-6 md:pb-8">Tell us more about your dog</h3>
+      <p class="md:text-xl pb-12">Take a few minutes to tell us about your dog, so we can create the right meal plan for your best friend.</p>
+    </article>
+    <article class="flex flex-col items-center justify-center text-center">
+      <Image src={step2} alt="dog illustration" class="pb-6 w-40 h-auto" />
+      <Image src={number2} alt="step 1" class="pb-6 md:pb-16 w-20 h-auto" />
+      <h3 class="text-2xl md:text-custom32 font-bold pb-6 md:pb-8">We create their unique recipe</h3>
+      <p class="md:text-xl pb-12">We tailor the recipe to your dog from over a million possible combinations.</p>
+    </article>
+    <article class="flex flex-col items-center justify-center text-center">
+      <Image src={step3} alt="dog illustration" class="pb-6 w-40 h-auto" />
+      <Image src={number3} alt="step 1" class="pb-6 md:pb-16 w-20 h-auto" />
+      <h3 class="text-2xl md:text-custom32 font-bold pb-6 md:pb-8">We ensure monthly deliveries</h3>
+      <p class="md:text-xl">We deliver everything your dog needs to your door, contact-free. You never run out.</p>
+    </article>
+  </div>
+</section>
+<section class="bg-BarkingAtTheMoon-100 mb-44">
+  <div class="md:grid grid-cols-2 mx-5 md:mx-custom104 py-custom104">
+    <article>
+      <Image src={treats} alt="image of dog treats" class="w-48 m-auto" />
+    </article>
+    <article>
+      <h3 class="text-2xl md:text-custom32 font-bold pb-6">Has your dog been a good pup?</h3>
+      <p class="pb-12">Add in yummy wet food and healthy treats. We’ll adjust your dog’s feeding plan to suit.</p>
+      <Button>See Our Add-ons</Button>
+    </article>
+  </div>
+</section>

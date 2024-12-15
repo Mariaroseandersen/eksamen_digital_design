@@ -1,0 +1,40 @@
+---
+import { Image } from "astro:assets";
+import doglick from "../assets/images/doglick.webp";
+import trustpilotrating from "../assets/images/trustpilotrating.webp";
+import trustpilotstar from "../assets/images/trustpilotstar.webp";
+import Button from "../components/Button.astro";
+import Reviewscard from "../components/Reviewscard.astro";
+---
+
+<section class="mx-5 md:mx-custom104 mb-12">
+  <h2 class="text-2xl md:text-custom54 font-paytone md:max-w-3xl pb-6 md:pb-16 uppercase">Dogs Love Us, Yours Will Too</h2>
+  <p class="pb-6 md:pb-16 md:max-w-2xl">With 19,000 Trustpilot reviews and 145,000 dogs enjoying 8 million meals monthly, we think you and your dog will love us too.</p>
+
+  <article class="sm:grid sm:grid-cols-2 md:grid-cols-3 gap-12">
+    <Reviewscard cardimage="buster.webp" cardimagealt="picture of buster the dog" cardname="Buster" dogbreed="2 y/o, Labrador Retriever" dogreview="“I can’t believe the difference since switching to this food. Buster’s coat is shinier, and he’s full of energy. Plus, the delivery is so convenient — I never worry about running out!”" />
+    <Reviewscard cardimage="layla.webp" cardimagealt="picture of layla the dog" cardname="Layla" dogbreed="4 y/o, Mixed Breed" dogreview="“Layla has always been a picky eater, but now she devours every meal! The personalized recipe made all the difference. I love knowing it’s made just for her.”" />
+    <Reviewscard cardimage="ozzy.webp" cardimagealt="picture of ozzy the dog" cardname="Ozzy" dogbreed="1 y/o, French Bulldog" dogreview="“The attention to detail is incredible. Ozzy’s allergies have improved a lot, and the customer service team is always so helpful. I highly recommend Tails.com.”" />
+  </article>
+</section>
+
+<section class="bg-SalmonTreat-100 mb-44">
+  <div class="md:grid grid-cols-2 mx-5 md:mx-custom104 pt-custom104">
+    <article>
+      <div class="flex items-center gap-3 pb-8">
+        <h3 class="text-2xl md:text-custom32 font-bold">We're EXCELLENT</h3>
+        <Image src={trustpilotrating} alt="trustpilot rating of 4.4 stars" class=" w-32 md:w-48 h-auto object-contain" />
+      </div>
+      <div class="flex items-center gap-3 pb-12">
+        <p>with over 30,000 reviews on</p>
+        <Image src={trustpilotstar} alt="trustpilot star logo" class=" w-8 md:w-16 h-auto object-contain" />
+        <p>Trustpilot</p>
+      </div>
+      <p class="pb-12 font-bold">And we would love to hear from you too!</p>
+      <Button variant="subprimary">Leave a Review</Button>
+    </article>
+    <article class="mt-8 md:mt-0">
+      <Image src={doglick} alt="image of dog licking screen" class="" />
+    </article>
+  </div>
+</section>

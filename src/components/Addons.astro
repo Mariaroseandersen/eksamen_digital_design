@@ -1,0 +1,15 @@
+---
+import Button from "../components/Button.astro";
+import Productcard from "../components/Productcard.astro";
+---
+
+<section class="mx-5 md:mx-custom104 mb-44">
+  <h2 class="text-2xl md:text-custom54 font-paytone md:max-w-3xl pb-6 md:pb-16 uppercase">Our Add-Ons</h2>
+  <p class="pb-6 md:pb-16 md:max-w-2xl">Has your dog been a good boy? Treat them with some of our add-ons, from Dental Dailies to delicious Good Dog Treats and Hand-Baked Biscuits.</p>
+
+  <article class="sm:grid sm:grid-cols-2 md:grid-cols-3 gap-12">
+    <Productcard cardimage="dental.webp" productname="Dental Dailies" class="" />
+    <Productcard cardimage="goodboytreats.webp" productname="Good Boy Treats" />
+    <Productcard cardimage="handbaked.webp" productname="Hand-Baked Biscuits" />
+  </article>
+</section>

@@ -12,7 +12,7 @@ export default {
 
       /* Font Sizes */
       fontSize: {
-        custom54: ["3.375rem", { lineHeight: "1.25" }], // 54px
+        custom54: ["3.375rem", { lineHeight: "1.15" }], // 54px
         custom40: ["2.5rem"], // 40px
         custom32: ["2rem"], // 32px
       },

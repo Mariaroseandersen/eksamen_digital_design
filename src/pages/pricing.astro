@@ -12,75 +12,76 @@ import Subscription from "../components/Subscription.astro";
 ---
 
 <MainLayout title="Tails.com">
-
-<!-- paddingen mellem p og knappen skal måske ændres når knappen kommer ind så det er 128 efter knappen  -->
-<section class="bg-SalmonTreat-200 md:pl-custom104 mb-16 md:mb-44" id="pricinghero">
-  <div class="md:grid grid-cols-2">
-    <div class="py-10 md:py-32 mx-5">
-      <h1 class="text-5xl md:text-custom54 pb-8 md:pb-16 font-paytone uppercase">AFFORDABLE CARE, TAILORED TO YOUR DOG</h1>
-      <p class="text-base md:text-2xl pb-8 md:pb-12">Every dog is unique, and so is the cost of their perfect meal plan.</p>
-    </div>
-    <div class="">
-      <Image class="hidden md:block h-full object-cover" src={pricinghero} alt="Dog with tounge out" />
-    </div>
-  </div>
-</section>
-
-<Howitworks />
-
-<section id="pricesize">
-  <section class="mx-5 md:mx-custom104 mb-44">
-    <h2 class="text-2xl md:text-custom54 font-paytone md:max-w-3xl pb-6 md:pb-16 uppercase">Made fresh for your dog at a price you'll love</h2>
-    <p class="pb-6 md:max-w-2xl">Every month, we create fresh, personalized meals just for your dog – no mass production, no compromises. See how affordable it is to give your furry friend the nutrition they deserve.</p>
-    <p class="pb-6 md:max-w-2xl">All prices are per month on average, based on your dog’s approximate weight. If you have any questions, you’re always welcome to contact us.</p>
-    <div class="sm:grid sm:grid-cols-2 md:grid-cols-5 gap-32 mb-12">
-      <article class="flex flex-col items-center justify-center text-center">
-        <Image src={step} alt="dog illustration" class="pb-6 w-40 h-auto" />
-        <h3 class="text-2xl md:text-custom32 font-bold pb-6 md:pb-8">Toy (kg)</h3>
-        <p class="md:text-xl pb-12">13,42 €</p>
-      </article>
-      <article class="flex flex-col items-center justify-center text-center">
-        <Image src={step} alt="dog illustration" class="pb-6 w-40 h-auto" />
-        <h3 class="text-2xl md:text-custom32 font-bold pb-6 md:pb-8">Small (kg)</h3>
-        <p class="md:text-xl pb-12">17,94 €</p>
-      </article>
-      <article class="flex flex-col items-center justify-center text-center">
-        <Image src={step} alt="dog illustration" class="pb-6 w-40 h-auto" />
-        <h3 class="text-2xl md:text-custom32 font-bold pb-6 md:pb-8">Medium (kg)</h3>
-        <p class="md:text-xl pb-12">26,33 €</p>
-      </article>
-      <article class="flex flex-col items-center justify-center text-center">
-        <Image src={step} alt="dog illustration" class="pb-6 w-40 h-auto" />
-        <h3 class="text-2xl md:text-custom32 font-bold pb-6 md:pb-8">Large (kg)</h3>
-        <p class="md:text-xl pb-12">35,91 €</p>
-      </article>
-      <article class="flex flex-col items-center justify-center text-center">
-        <Image src={step} alt="dog illustration" class="pb-6 w-40 h-auto" />
-        <h3 class="text-2xl md:text-custom32 font-bold pb-6 md:pb-8">Giant (kg)</h3>
-        <p class="md:text-xl">46,83 €</p>
-      </article>
+  <!-- paddingen mellem p og knappen skal måske ændres når knappen kommer ind så det er 128 efter knappen  -->
+  <section class="bg-SalmonTreat-200 md:pl-custom104 mb-16 md:mb-44" id="pricinghero">
+    <div class="md:grid grid-cols-2">
+      <div class="py-10 md:py-32 mx-5">
+        <h1 class="text-5xl md:text-custom54 pb-8 md:pb-16 font-paytone uppercase">AFFORDABLE CARE, TAILORED TO YOUR DOG</h1>
+        <p class="text-base md:text-2xl pb-8 md:pb-12">Every dog is unique, and so is the cost of their perfect meal plan.</p>
+        <a href="/form">
+          <Button variant="primary" size="desktoplarge">Start Trial</Button>
+        </a>
+      </div>
+      <div class="">
+        <Image class="hidden md:block h-full object-cover" src={pricinghero} alt="Dog with tounge out" />
+      </div>
     </div>
   </section>
-</section>
 
-<section id="uniqueprice">
-  <section class="bg-BarkingAtTheMoon-500 grid grid-cols-2 gap-44 py-8 px-5 md:p-custom104 mb-44">
-    <h1 class="text-FluffyCloud-300 max-w-3xl text-2xl text-center md:text-8xl md:text-left font-paytone uppercase">Your price is <span class="text-SalmonTreat-500">unique</span> and based on</h1>
-    <div class="text-FluffyCloud-300 text-center">
-      <h2 class="text-custom40 font-bold">Ingredients</h2>
-      <p class="text-2xl pb-16">Some cost more than others</p>
-      <h2 class="text-custom40 font-bold">Volume</h2>
-      <p class="text-2xl pb-16">Larger dogs need more food</p>
-      <h2 class="text-custom40 font-bold">Supplements</h2>
-      <p class="text-2xl pb-16">For dogs that need extra support</p>
-    </div>
+  <Howitworks />
+
+  <section id="pricesize">
+    <section class="mx-5 md:mx-custom104 mb-44">
+      <h2 class="text-2xl md:text-custom54 font-paytone md:max-w-3xl pb-6 md:pb-16 uppercase">Made fresh for your dog at a price you'll love</h2>
+      <p class="pb-6 md:max-w-2xl">Every month, we create fresh, personalized meals just for your dog – no mass production, no compromises. See how affordable it is to give your furry friend the nutrition they deserve.</p>
+      <p class="pb-6 md:max-w-2xl">All prices are per month on average, based on your dog’s approximate weight. If you have any questions, you’re always welcome to contact us.</p>
+      <div class="sm:grid sm:grid-cols-2 md:grid-cols-5 gap-32 mb-12">
+        <article class="flex flex-col items-center justify-center text-center">
+          <Image src={step} alt="dog illustration" class="pb-6 w-40 h-auto" />
+          <h3 class="text-2xl md:text-custom32 font-bold pb-6 md:pb-8">Toy (kg)</h3>
+          <p class="md:text-xl pb-12">13,42 €</p>
+        </article>
+        <article class="flex flex-col items-center justify-center text-center">
+          <Image src={step} alt="dog illustration" class="pb-6 w-40 h-auto" />
+          <h3 class="text-2xl md:text-custom32 font-bold pb-6 md:pb-8">Small (kg)</h3>
+          <p class="md:text-xl pb-12">17,94 €</p>
+        </article>
+        <article class="flex flex-col items-center justify-center text-center">
+          <Image src={step} alt="dog illustration" class="pb-6 w-40 h-auto" />
+          <h3 class="text-2xl md:text-custom32 font-bold pb-6 md:pb-8">Medium (kg)</h3>
+          <p class="md:text-xl pb-12">26,33 €</p>
+        </article>
+        <article class="flex flex-col items-center justify-center text-center">
+          <Image src={step} alt="dog illustration" class="pb-6 w-40 h-auto" />
+          <h3 class="text-2xl md:text-custom32 font-bold pb-6 md:pb-8">Large (kg)</h3>
+          <p class="md:text-xl pb-12">35,91 €</p>
+        </article>
+        <article class="flex flex-col items-center justify-center text-center">
+          <Image src={step} alt="dog illustration" class="pb-6 w-40 h-auto" />
+          <h3 class="text-2xl md:text-custom32 font-bold pb-6 md:pb-8">Giant (kg)</h3>
+          <p class="md:text-xl">46,83 €</p>
+        </article>
+      </div>
+    </section>
   </section>
-</section>
 
-<Reviews />
+  <section id="uniqueprice">
+    <section class="bg-BarkingAtTheMoon-500 grid grid-cols-2 gap-44 py-8 px-5 md:p-custom104 mb-44">
+      <h1 class="text-FluffyCloud-300 max-w-3xl text-2xl text-center md:text-8xl md:text-left font-paytone uppercase">Your price is <span class="text-SalmonTreat-500">unique</span> and based on</h1>
+      <div class="text-FluffyCloud-300 text-center">
+        <h2 class="text-custom40 font-bold">Ingredients</h2>
+        <p class="text-2xl pb-16">Some cost more than others</p>
+        <h2 class="text-custom40 font-bold">Volume</h2>
+        <p class="text-2xl pb-16">Larger dogs need more food</p>
+        <h2 class="text-custom40 font-bold">Supplements</h2>
+        <p class="text-2xl pb-16">For dogs that need extra support</p>
+      </div>
+    </section>
+  </section>
 
-<Ourproducts />
+  <Reviews />
 
-<Subscription />
+  <Ourproducts />
 
+  <Subscription />
 </MainLayout>

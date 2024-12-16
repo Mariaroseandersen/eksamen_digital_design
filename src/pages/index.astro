@@ -11,6 +11,16 @@ import Subscription from "../components/Subscription.astro";
 import { Image } from "astro:assets";
 import whytails from "../assets/images/WhyTails.webp";
 import herodog1 from "../assets/images/herodog1.webp";
+import some1 from "../assets/images/Some1.webp";
+import some2 from "../assets/images/Some2.webp";
+import some3 from "../assets/images/Some3.webp";
+import some4 from "../assets/images/Some4.webp";
+import some5 from "../assets/images/Some5.webp";
+import some6 from "../assets/images/Some6.webp";
+import some7 from "../assets/images/Some7.webp";
+import some8 from "../assets/images/Some8.webp";
+import some9 from "../assets/images/Some9.webp";
+import some10 from "../assets/images/Some10.webp";
 ---
 
 <MainLayout title="Tails.com" />
@@ -51,7 +61,21 @@ import herodog1 from "../assets/images/herodog1.webp";
 
 <Quote />
 
-<section id="some"></section>
+<section class="mx-5 md:mx-custom104 mb-16 md:mb-44" id="some">
+  <h1 class="text-2xl md:text-custom54 font-paytone uppercase md:max-w-3xl pb-6 md:pb-16">FOLLOW US ON INSTAGRAM TO SEE MORE WAGGING TAILS</h1>
+  <div class="grid grid-cols-2 sm:grid-cols-2 md:grid-cols-5 gap-3 md:gap-6">
+    <Image class="rounded-custom50px h-48 md:h-60 w-full object-cover" src={some1} alt="SoMe billede" />
+    <Image class="rounded-custom50px h-48 md:h-60 w-full object-cover" src={some2} alt="SoMe billede" />
+    <Image class="rounded-custom50px h-48 md:h-60 w-full object-cover" src={some3} alt="SoMe billede" />
+    <Image class="rounded-custom50px h-48 md:h-60 w-full object-cover" src={some4} alt="SoMe billede" />
+    <Image class="rounded-custom50px h-48 md:h-60 w-full object-cover" src={some5} alt="SoMe billede" />
+    <Image class="rounded-custom50px h-48 md:h-60 w-full object-cover" src={some6} alt="SoMe billede" />
+    <Image class="rounded-custom50px h-48 md:h-60 w-full object-cover" src={some7} alt="SoMe billede" />
+    <Image class="rounded-custom50px h-48 md:h-60 w-full object-cover" src={some8} alt="SoMe billede" />
+    <Image class="rounded-custom50px h-48 md:h-60 w-full object-cover" src={some9} alt="SoMe billede" />
+    <Image class="rounded-custom50px h-48 md:h-60 w-full object-cover" src={some10} alt="SoMe billede" />
+  </div>
+</section>
 
 <Subscription />
 

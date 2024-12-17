@@ -2,6 +2,25 @@
 
 ---
 
-<section class="bg-BarkingAtTheMoon-500 py-8 px-5 md:p-custom104 mb-16 md:mb-44" id="kinetic">
-  <h2 class="text-FluffyCloud-300 text-2xl text-center md:text-custom54 md:text-left font-paytone uppercase">YOUR BEST FRIEND DERSERVES</h2>
+<section class="bg-BarkingAtTheMoon-500 py-8 px-5 md:p-custom104 mb-16 md:mb-44">
+  <h2 class="text-FluffyCloud-300 text-2xl text-center md:text-custom54 md:text-left font-paytone uppercase relative">YOUR BEST FRIEND DESERVES</h2>
+  <div id="kinetic">
+    <h2 class="text-SalmonTreat-500 absolute opacity-100 transition-opacity duration-1000 ease-in-out">A Shiny Coat</h2>
+    <h2 id="kinetic" class="text-SalmonTreat-500 absolute opacity-0 transition-opacity duration-1000 ease-in-out">Healthy teeth</h2>
+  </div>
 </section>
+
+<script>
+  const kinetic = document.querySelectorAll("#kinetic h2");
+  let currentIndex = 0;
+
+  function fadeText() {
+    kinetic[currentIndex].classList.remove("opacity-100");
+    kinetic[currentIndex].classList.add("opacity-0");
+    currentIndex = (currentIndex + 1) % kinetic.length;
+    kinetic[currentIndex].classList.remove("opacity-0");
+    kinetic[currentIndex].classList.add("opacity-100");
+  }
+
+  setInterval(fadeText, 2000); // Changes image every 2 seconds
+</script>

@@ -29,39 +29,37 @@ import Subscription from "../components/Subscription.astro";
 
   <Howitworks />
 
-  <section id="pricesize">
-    <section class="mx-5 md:mx-custom104 mb-44">
-      <h2 class="text-2xl md:text-custom54 font-paytone md:max-w-3xl pb-6 md:pb-8 uppercase">Made fresh for your dog at a price you'll love</h2>
-      <p class="pb-6 text-xs md:text-base md:max-w-2xl">Every month, we create fresh, personalized meals just for your dog – no mass production, no compromises. See how affordable it is to give your furry friend the nutrition they deserve.</p>
-      <p class="pb-6 text-xs md:text-base md:max-w-2xl">All prices are per month on average, based on your dog’s approximate weight. If you have any questions, you’re always welcome to contact us.</p>
-      <div class="sm:grid sm:grid-cols-2 md:grid-cols-5 gap-32 mb-12">
-        <article class="flex flex-col items-center justify-center text-center">
-          <Image src={step} alt="dog illustration" class="pb-6 w-40 h-auto" />
-          <h3 class="text-sm md:text-xl font-bold pb-3 md:pb-3">Toy (kg)</h3>
-          <p class="text-xs md:text-base pb-12">13,42 €</p>
-        </article>
-        <article class="flex flex-col items-center justify-center text-center">
-          <Image src={step} alt="dog illustration" class="pb-6 w-40 h-auto" />
-          <h3 class="text-sm md:text-xl font-bold pb-3 md:pb-3">Small (kg)</h3>
-          <p class="text-xs md:text-base pb-12">17,94 €</p>
-        </article>
-        <article class="flex flex-col items-center justify-center text-center">
-          <Image src={step} alt="dog illustration" class="pb-6 w-40 h-auto" />
-          <h3 class="text-sm md:text-xl font-bold pb-3 md:pb-3">Medium (kg)</h3>
-          <p class="text-xs md:text-base pb-12">26,33 €</p>
-        </article>
-        <article class="flex flex-col items-center justify-center text-center">
-          <Image src={step} alt="dog illustration" class="pb-6 w-40 h-auto" />
-          <h3 class="text-sm md:text-xl font-bold pb-3 md:pb-3">Large (kg)</h3>
-          <p class="text-xs md:text-base pb-12">35,91 €</p>
-        </article>
-        <article class="flex flex-col items-center justify-center text-center">
-          <Image src={step} alt="dog illustration" class="pb-6 w-40 h-auto" />
-          <h3 class="text-sm md:text-xl font-bold pb-3 md:pb-3">Giant (kg)</h3>
-          <p class="text-xs md:text-base">46,833 €</p>
-        </article>
-      </div>
-    </section>
+  <section class="mx-5 md:mx-custom104 mb-16 md:mb-44" id="pricesize">
+    <h2 class="text-2xl md:text-custom54 font-paytone md:max-w-3xl pb-6 md:pb-8 uppercase">Made fresh for your dog at a price you'll love</h2>
+    <p class="pb-6 text-xs md:text-base md:max-w-2xl">Every month, we create fresh, personalized meals just for your dog – no mass production, no compromises. See how affordable it is to give your furry friend the nutrition they deserve.</p>
+    <p class="pb-8 text-xs md:text-base md:max-w-2xl">All prices are per month on average, based on your dog’s approximate weight. If you have any questions, you’re always welcome to contact us.</p>
+    <div class="sm:grid sm:grid-cols-2 md:grid-cols-5 gap-10 stagger-container">
+      <article class="flex flex-col items-center justify-center text-center stagger-item">
+        <Image src={step} alt="dog illustration" class="pb-8 w-40 h-auto" />
+        <h3 class="text-sm md:text-xl font-bold pb-3">Toy (1-5kg)</h3>
+        <p class="text-xs md:text-base">13,42 € per month <br />average</p>
+      </article>
+      <article class="flex flex-col items-center justify-center text-center stagger-item">
+        <Image src={step} alt="dog illustration" class="pb-8 w-40 h-auto" />
+        <h3 class="text-sm md:text-xl font-bold pb-3">Small (5-10kg)</h3>
+        <p class="text-xs md:text-base">17,94 € per month <br /> average</p>
+      </article>
+      <article class="flex flex-col items-center justify-center text-center stagger-item">
+        <Image src={step} alt="dog illustration" class="pb-8 w-40 h-auto" />
+        <h3 class="text-sm md:text-xl font-bold pb-3">Medium (25-45kg)</h3>
+        <p class="text-xs md:text-base">26,33 € per month <br /> average</p>
+      </article>
+      <article class="flex flex-col items-center justify-center text-center stagger-item">
+        <Image src={step} alt="dog illustration" class="pb-8 w-40 h-auto" />
+        <h3 class="text-sm md:text-xl font-bold pb-3">Large (over 45kg)</h3>
+        <p class="text-xs md:text-base">35,91 € per month <br /> average</p>
+      </article>
+      <article class="flex flex-col items-center justify-center text-center stagger-item">
+        <Image src={step} alt="dog illustration" class="pb-8 w-40 h-auto" />
+        <h3 class="text-sm md:text-xl font-bold pb-3">Giant (kg)</h3>
+        <p class="text-xs md:text-base">46,83 € per month <br />average</p>
+      </article>
+    </div>
   </section>
 
   <section id="uniqueprice" class="bg-BarkingAtTheMoon-500 md:grid grid-cols-2 gap-44 py-8 px-5 md:p-custom104 mb-44">
@@ -90,10 +88,22 @@ import Subscription from "../components/Subscription.astro";
 <script>
   import { animate, stagger, inView, scroll } from "motion";
 
-  animate("body", { opacity: [0, 1] }, { duration: 1.5 });
+  // Initial body fade-in animation
+  animate("body", { opacity: [0, 1] }, { duration: 2 }); // Øget duration for langsommere fade-in
 
-  // Stagger
+  // Stagger animation for .stagger-container (the entire article)
   inView(".stagger-container", () => {
-    animate(".stagger-item", { opacity: [0, 1], transform: ["translateY(20px)", "translateY(0)"] }, { delay: stagger(0.7, { start: 0.5 }), duration: 0.8, easing: "ease-out" });
+    animate(
+      ".stagger-item",
+      {
+        opacity: [0, 1],
+        transform: ["translateY(20px)", "translateY(0)"],
+      },
+      {
+        delay: stagger(0.6, { start: 0.3 }), // Øget forsinkelse mellem animationer
+        duration: 1.5, // Øget duration for langsommere animationer
+        easing: "ease-out", // Smooth easing
+      }
+    );
   });
 </script>

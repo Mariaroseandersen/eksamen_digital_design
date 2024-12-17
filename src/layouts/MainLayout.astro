@@ -1,14 +1,20 @@
 ---
 import Navbar from "../components/Navbar.astro";
 import Footer from "../components/Footer.astro";
+import Gotopbutton from "../components/Gotopbutton.astro";
 import "../styles/tailwind.css";
 import "animate.css";
 const { title } = Astro.props;
 ---
+
 <html lang="en">
   <head>
     <meta charset="utf-8" />
     <link rel="icon" type="image/svg+xml" href="/tailsfavicon.svg" />
+
+    <!-- Link til Google Material Symbols for pilen -->
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0" />
+
     <meta name="viewport" content="width=device-width" />
     <meta name="generator" content={Astro.generator} />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
@@ -21,7 +27,7 @@ const { title } = Astro.props;
     <header>
       <Navbar />
     </header>
-
+    <Gotopbutton />
     <main>
       <slot />
     </main>

@@ -1,0 +1,37 @@
+---
+
+---
+
+<!-- Go-top button med Tailwind-klasser -->
+<button class="go-top-btn fixed bottom-36 right-9 p-2 rounded-full bg-GoldenRetriever-500 border border-black hidden justify-center items-center">
+  <i class="material-symbols-outlined">arrow_upward_alt</i>
+</button>
+
+<script>
+  document.addEventListener("DOMContentLoaded", () => {
+    const goTopBtn = document.querySelector(".go-top-btn");
+
+    // Lyt efter scroll-begivenhed
+    window.addEventListener("scroll", checkHeight);
+
+    function checkHeight() {
+      // Beregn halvdelen af dokumentets højde
+      const halfPage = document.documentElement.scrollHeight / 2;
+
+      // Hvis scroll-positionen er større end halvdelen af sidens længde
+      if (window.scrollY > halfPage) {
+        goTopBtn.style.display = "flex"; // Vis knappen
+      } else {
+        goTopBtn.style.display = "none"; // Skjul knappen
+      }
+    }
+
+    // Klik på knappen for at scrolle til toppen
+    goTopBtn.addEventListener("click", () => {
+      window.scrollTo({
+        top: 0,
+        behavior: "smooth", // Glidende scroll til toppen
+      });
+    });
+  });
+</script>

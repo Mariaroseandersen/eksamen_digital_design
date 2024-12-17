@@ -1,4 +1,5 @@
 ---
+import Button from "../components/Button.astro";
 import { Image } from "astro:assets";
 import sean from "../assets/images/Sean.webp";
 import amy from "../assets/images/Amy.webp";
@@ -8,45 +9,56 @@ import helpdog from "../assets/images/Helpdog.webp";
 
 <!-- Skulle det være en text base i p her eller en text-xl (hvis vi følger designsystemet og prototype skal den være xl) / text-custom32 er ikke bold - hvordan får jeg den det? -->
 <section class="mx-5 md:px-custom104">
-  <h2 class="text-2xl font-paytone uppercase md:text-custom54 md:max-w-3xl pb-6 md:pb-10">WE KNOW WHAT WE'RE DOING AND WE'RE PASSIONATE ABOUT IT</h2>
-  <p class="text-xs md:text-xl md:max-w-3xl pb-10 md:pb-16">Behind every tailored meal is a passionate team of experts dedicated to improving dogs’ lives. From nutritionists to developers, meet the people who make tails.com’s personalized approach possible.</p>
+  <h2 class="text-2xl font-paytone uppercase md:text-custom54 md:max-w-3xl pb-4 md:pb-8">WE KNOW WHAT WE'RE DOING AND WE'RE PASSIONATE ABOUT IT</h2>
+  <p class="text-sm md:text-xl md:max-w-3xl pb-8 md:pb-16">Behind every tailored meal is a passionate team of experts dedicated to improving dogs’ lives. From nutritionists to developers, meet the people who make tails.com’s personalized approach possible.</p>
 
-  <div class="pb-8 md:pb-16 md:grid grid-cols-3 gap-custom90">
-    <div class="pb-12">
+  <div class="pb-6 md:pb-16 md:grid grid-cols-3 gap-custom90">
+    <div>
       <Image class="pb-4 md:pb-10" src={sean} alt="Sean McCormack, Head Vet" />
-      <h3 class="pb-4 text-xl md:text-custom32 font-bold">Sean McCormack</h3>
+      <h3 class="pb-3 text-base md:text-2xl font-bold">Sean McCormack</h3>
       <p class="text-sm md:text-xl pb-6">BSc (Hons), MVB, MRCVS (Head vet)</p>
-      <p class="text-xs md:text-base pb-3 md:pb-4">Sean studied Animal Science as an undergraduate learning about anatomy, physiology, husbandry and nutritional management of a range of domestic animals, followed by his Veterinary Medicine degree (MVB) at University College Dublin.</p>
-      <p class="text-xs md:text-base">Having spent six years in private practice at various first opinion and referral small animal clinics, he has a great understanding of dog owners and the concerns they face when trying to choose the best diet for their pets.</p>
+      <p class="text-xs md:text-base pb-4 md:pb-6">Sean studied Animal Science as an undergraduate learning about anatomy, physiology, husbandry and nutritional management of a range of domestic animals, followed by his Veterinary Medicine degree (MVB) at University College Dublin.</p>
+      <p class="text-xs md:text-base pb-12 md:pb-0">Having spent six years in private practice at various first opinion and referral small animal clinics, he has a great understanding of dog owners and the concerns they face when trying to choose the best diet for their pets.</p>
     </div>
 
-    <div class="pb-12">
+    <div>
       <Image class="pb-4 md:pb-10" src={amy} alt="Amy Henson, Veterinary nurse" />
-      <h3 class="pb-4 text-xl md:text-custom32 font-bold">Amy Henson</h3>
+      <h3 class="pb-4 text-base md:text-2xl font-bold">Amy Henson</h3>
       <p class="text-sm md:text-xl pb-6">BSc (Hons) RVN, N.Cert (SAN) (Veterinary nurse & customer experience team leader)</p>
-      <p class="text-xs md:text-base pb-3 md:pb-4">Amy has been a qualified veterinary nurse for over ten years, spending most of this time in various roles within the charity sector and in specialist veterinary centres. She has industry-leading expertise in animal nutrition and dog owner education.</p>
-      <p class="text-xs md:text-base">Amy is our customer experience nutritional team leader, and is a vital source of knowledge and training for the whole team.</p>
+      <p class="text-xs md:text-base pb-4 md:pb-6">Amy has been a qualified veterinary nurse for over ten years, spending most of this time in various roles within the charity sector and in specialist veterinary centres. She has industry-leading expertise in animal nutrition and dog owner education.</p>
+      <p class="text-xs md:text-base pb-12 md:pb-0">Amy is our customer experience nutritional team leader, and is a vital source of knowledge and training for the whole team.</p>
     </div>
 
-    <div class="pb-12">
-      <Image class="pb-4 md:pb-10" src={samantha} alt="Dr Samantha Ware, Lead nutritionist" />
-      <h3 class="pb-4 text-xl md:text-custom32 font-bold">Dr Samantha Ware</h3>
+    <div>
+      <Image class="pb-6 md:pb-10" src={samantha} alt="Dr Samantha Ware, Lead nutritionist" />
+      <h3 class="pb-4 text-base md:text-2xl font-bold">Dr Samantha Ware</h3>
       <p class="text-sm md:text-xl pb-6">MSc, PhD (Lead nutritionist)</p>
-      <p class="text-xs md:text-base pb-3 md:pb-4">Samantha has over sixteen years experience in animal nutrition. From a Master's degree in animal nutrition, a PhD in nutritional sciences and an extensive professional career formulating and developing diets within the pet food industry, Samantha is extremely knowledgeable on the dietary needs of individual dogs.</p>
-      <p class="text-xs md:text-base">Having previously formulated food for the royal dogs, Samantha now spends her time developing tails.com nutritional blends. Samantha is pictured with her rescue pug, Giselle.</p>
+      <p class="text-xs md:text-base pb-4 md:pb-6">Samantha has over sixteen years experience in animal nutrition. From a Master's degree in animal nutrition, a PhD in nutritional sciences and an extensive professional career formulating and developing diets within the pet food industry, Samantha is extremely knowledgeable on the dietary needs of individual dogs.</p>
+      <p class="text-xs md:text-base">Having previously formulated food for the royal dogs, Samantha now spends her time developing tails.com nutritional blends.</p>
     </div>
   </div>
 
-  <!-- button (har sat padding button på kolonnen over (i mobil og desktop), men der skal også padding button på denne del når knappen er sat ind til teksten under (den skal være custum104 i desktop og for mobil pb-16 md:pb-custom104)
-   -->
+  <div class="text-center pb-16 md:pb-custom90">
+    <a href="/">
+      <Button variant="primary" size="desktopsmall">More About Us</Button>
+    </a>
+  </div>
+
   <div class="md:grid grid-cols-2">
     <div>
-      <h3 class="text-xl md:text-custom32 pb-6 md:pb-8 font-bold">We are here for you</h3>
-      <p class="text-xs md:text-base pb-3 md:pb-4">Got questions? We get it – as fellow dog owners, we’ve been there too. That’s why we’ve gathered all the tips and tricks we’ve learned along the way in the Tails.com blog. From expert advice on puppy health and training by our head vet Sean to handy tips for making life with your furry friend even better – it’s all there.</p>
-      <p class="text-xs md:text-base">Our friendly customer service team is also always ready to help in our chat, with support from our veterinary and nutrition experts whenever you need it.</p>
+      <h3 class="text-base md:text-2xl font-bold pb-6 md:pb-8">We are here for you</h3>
+      <p class="text-xs md:text-base pb-4 md:pb-4">
+        Got questions? We get it – as fellow dog owners, we’ve been there too. That’s why we’ve gathered all the tips and tricks we’ve learned along the way in the
+        <a href="/" class="text-SalmonTreat-600 no-underline">Tails.com blog</a>. From expert advice on puppy health and training by our head vet Sean to handy tips for making life with your furry friend even better – it’s all there.
+      </p>
+      <p class="text-xs md:text-base">
+        Our friendly customer service team is also always ready to help in <a href="/" class="text-SalmonTreat-600 no-underlineunderline">our chat</a>, with support from our veterinary and nutrition experts whenever you need it.
+      </p>
     </div>
     <div>
-      <Image class="pb-4 md:pb-10" src={helpdog} alt="Dr Samantha Ware, Lead nutritionist" />
+      <div>
+        <Image class="md:-mt-20" src={helpdog} alt="help dog" />
+      </div>
     </div>
   </div>
 </section>

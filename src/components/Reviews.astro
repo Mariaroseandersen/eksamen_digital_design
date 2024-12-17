@@ -8,8 +8,8 @@ import Reviewscard from "../components/Reviewscard.astro";
 ---
 
 <section class="mx-5 md:mx-custom104 mb-12">
-  <h2 class="text-2xl md:text-custom54 font-paytone md:max-w-3xl pb-6 md:pb-16 uppercase">Dogs Love Us, Yours Will Too</h2>
-  <p class="pb-6 md:pb-16 md:max-w-2xl">With 19,000 Trustpilot reviews and 145,000 dogs enjoying 8 million meals monthly, we think you and your dog will love us too.</p>
+  <h2 class="text-2xl md:text-custom54 font-paytone md:max-w-3xl pb-6 md:pb-8 uppercase">Dogs Love Us, Yours Will Too</h2>
+  <p class="text-sm md:text-xl pb-8 md:pb-16 md:max-w-2xl">With 19,000 Trustpilot reviews and 145,000 dogs enjoying 8 million meals monthly, we think you and your dog will love us too.</p>
 
   <article class="sm:grid sm:grid-cols-2 md:grid-cols-3 gap-12">
     <Reviewscard cardimage="buster.webp" cardimagealt="picture of buster the dog" cardname="Buster" dogbreed="2 y/o, Labrador Retriever" dogreview="“I can’t believe the difference since switching to this food. Buster’s coat is shinier, and he’s full of energy. Plus, the delivery is so convenient — I never worry about running out!”" />
@@ -19,22 +19,22 @@ import Reviewscard from "../components/Reviewscard.astro";
 </section>
 
 <section class="bg-SalmonTreat-100 mb-44">
-  <div class="md:grid grid-cols-2 mx-5 md:mx-custom104 pt-custom104">
-    <article>
-      <div class="flex items-center gap-3 pb-8">
-        <h3 class="text-2xl md:text-custom32 font-bold">We're EXCELLENT</h3>
-        <Image src={trustpilotrating} alt="trustpilot rating of 4.4 stars" class=" w-32 md:w-48 h-auto object-contain" />
+  <div class="md:grid grid-cols-2 mx-5 md:mx-custom104">
+    <article class="flex flex-col items-center md:items-start justify-center text-center py-12 md:py-custom20">
+      <div class="flex items-center gap-3 pb-5 md:pb-8">
+        <h3 class="text-base md:text-2xl font-bold">We're EXCELLENT</h3>
+        <Image src={trustpilotrating} alt="trustpilot rating of 4.4 stars" class="w-32 md:w-48 h-auto object-contain" />
       </div>
-      <div class="flex items-center gap-3 pb-12">
-        <p>with over 30,000 reviews on</p>
-        <Image src={trustpilotstar} alt="trustpilot star logo" class=" w-8 md:w-16 h-auto object-contain" />
-        <p>Trustpilot</p>
+      <div class="flex items-center gap-3 pb-8 md:pb-12">
+        <p class="text-sm md:text-xl">with over 30,000 reviews on</p>
+        <Image src={trustpilotstar} alt="trustpilot star logo" class="w-8 md:w-16 h-auto object-contain" />
+        <p class="text-sm md:text-xl">Trustpilot</p>
       </div>
-      <p class="pb-12 font-bold">And we would love to hear from you too!</p>
-      <Button variant="subprimary">Leave a Review</Button>
+      <p class="text-sm md:text-xl pb-6 md:pb-12 font-bold">And we would love to hear from you too!</p>
+      <Button variant="subprimary" size="small">Leave a Review</Button>
     </article>
-    <article class="mt-8 md:mt-0">
-      <Image src={doglick} alt="image of dog licking screen" class="" />
+    <article class="mt-3 md:mt-0 flex items-end justify-center">
+      <Image src={doglick} alt="image of dog licking screen" class="w-[300px] md:w-[400px]" />
     </article>
   </div>
 </section>

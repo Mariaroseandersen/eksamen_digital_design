@@ -56,7 +56,7 @@ import Otheroptions from "../components/Otheroptions.astro";
 
   <Howitworks />
 
-  <section class="mx-5 md:mx-custom104 mb-16 md:mb-44" id="supportpuppy">
+  <!-- <section class="mx-5 md:mx-custom104 mb-16 md:mb-44" id="supportpuppy">
     <div class="md:grid grid-cols-2 gap-custom90">
       <div class="">
         <h2 class="text-2xl text-center md:text-left md:text-custom54 font-paytone uppercase md:max-w-3xl pb-4 md:pb-8">SUPPORTING YOUR PUPPY AS THEY GROW</h2>
@@ -74,6 +74,26 @@ import Otheroptions from "../components/Otheroptions.astro";
         <p class="text-xs md:text-base">Ongoing support for life means we adjust your dog's recipe as they grow, so you’ll never need to worry about switching food.</p>
       </div>
     </div>
+  </section> -->
+
+  <section class="mx-5 md:mx-custom104 mb-16 md:mb-44" id="supportpuppy">
+    <div class="md:grid grid-cols-2 gap-custom90">
+      <div class="">
+        <h2 class="text-2xl text-center md:text-left md:text-custom54 font-paytone uppercase md:max-w-3xl pb-4 md:pb-8">SUPPORTING YOUR PUPPY AS THEY GROW</h2>
+        <div class="flex">
+          <Image class="w-1/2" src={beaglepuppy} alt="Beagle puppy" />
+          <Image class="w-1/2" src={beagleadult} alt="Beagle adult" />
+        </div>
+      </div>
+      <div class="pt-8 text-center md:text-left">
+        <h3 class="stagger-item text-base md:text-2xl font-bold pb-3">6-14 Weeks Old</h3>
+        <p class="stagger-item text-xs md:text-base pb-8 md:pb-16">A delivery every fortnight ensures your growing pup gets the nutrition they need, right when they need it.</p>
+        <h3 class="stagger-item text-base md:text-2xl font-bold pb-3">14 Weeks Onwards</h3>
+        <p class="stagger-item text-xs md:text-base pb-8 md:pb-16">A monthly delivery tailored to your pup, gradually introducing new kibble types based on their size, breed, and activity level.</p>
+        <h3 class="stagger-item text-base md:text-2xl font-bold pb-3">Adulthood</h3>
+        <p class="stagger-item text-xs md:text-base">Ongoing support for life means we adjust your dog's recipe as they grow, so you’ll never need to worry about switching food.</p>
+      </div>
+    </div>
   </section>
 
   <Otheroptions />
@@ -85,4 +105,20 @@ import Otheroptions from "../components/Otheroptions.astro";
   import { animate, stagger, inView, scroll } from "motion";
 
   animate("body", { opacity: [0, 1] }, { duration: 1.5 });
+
+  // Stagger
+  inView("#supportpuppy", () => {
+    animate(
+      ".stagger-item",
+      {
+        opacity: [0, 1],
+        transform: ["translateY(20px)", "translateY(0)"],
+      },
+      {
+        delay: stagger(0.3, { start: 0.7 }), // Animerer hvert element med 0.3s forsinkelse
+        duration: 0.7, // Hver animation varer 0.8 sekunder
+        easing: "ease-out", // Glidende afslutning
+      }
+    );
+  });
 </script>

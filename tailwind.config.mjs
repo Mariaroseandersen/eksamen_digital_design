@@ -87,6 +87,10 @@ export default {
         custom90: "90px",
         custom104: "104px",
       },
+
+      cursor: {
+        handcursor: "url(/tailscursor.svg) 25 25, pointer",
+      },
     },
 
     boxShadow: {

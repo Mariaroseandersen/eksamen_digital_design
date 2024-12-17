@@ -3,5 +3,8 @@
 @tailwind utilities;
 
 @layer base{
-
+ a,
+  button {
+    @apply cursor-handcursor;
+  }
 }

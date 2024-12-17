@@ -14,68 +14,69 @@ import Otheroptions from "../components/Otheroptions.astro";
 ---
 
 <MainLayout title="Tails.com">
-
-<section class="bg-SalmonTreat-200 px-5 md:px-custom104 py-10 md:py-32 mb-16 md:mb-44" id="puppyhero">
-  <div class="md:grid grid-cols-2">
-    <div>
-      <h1 class="text-5xl md:text-custom54 pb-8 md:pb-16 font-paytone uppercase">WHAT MAKES THE BEST PUPPY FOOD?</h1>
-      <p class="text-base md:text-2xl pb-8">Our food gives your puppy the nutrition they need to run and roll and grow and learn. Tell us about your pup and we'll create a recipe of dry food that develops with them as they grow.</p>
-      <p class="text-base md:text-2xl pb-8 md:pb-12">You get clear portion recommendations and our adjustable scoop too, so it's easy to serve the right amount every day - for a healthy, happy puppy.</p>
-    </div>
-    <div>
-      <Image class="" src={puppyhero} alt="Dalmatian puppy" />
-    </div>
-  </div>
-</section>
-
-<section class="mx-5 md:mx-custom104 mb-16 md:mb-44" id="eathealthy">
-  <h1 class="text-2xl md:text-custom54 font-paytone uppercase md:max-w-3xl pb-6 md:pb-16">YOU SHOULDN’T BE THE ONLY ONE EATING HEALTHY</h1>
-  <div class="flex flex-col md:grid grid-cols-3 md:gap-16">
-    <div class="order-2 md:order-1">
-      <h3 class="text-2xl md:text-custom32 pb-5">Immune system</h3>
-      <p class="pb-8 md:pb-custom104 text-sm md:text-base">Beta-glucans and nucleotides help to enhance and regulate your puppy’s immune system - and offer extra protection by improving their response to vaccinations too.</p>
-      <h3 class="text-2xl md:text-custom32 pb-5">Mental development</h3>
-      <p class="pb-8 md:pb-0 text-sm md:text-base">Not many puppy foods include DHA omega-3. But ours does. This fatty acid is proven to aid learning and socialisation, and reduce the risk of behavioural problems.</p>
-    </div>
-    <div class="order-1 md:order-2">
-      <Image class="pb-8 md:pb-0" src={foodbowl} alt="Foodbowl" />
-    </div>
-    <div class="order-3">
-      <h3 class="text-2xl md:text-custom32 pb-5">Digestive system</h3>
-      <p class="pb-8 md:pb-custom104 text-sm md:text-base">We use chicken to aid your pup’s delicate digestion. And we also include prebiotics like FOS and MOS to help promote good bacteria - this is very important for your puppies.</p>
-      <h3 class="text-2xl md:text-custom32 pb-5">Energy for growth</h3>
-      <p class="text-sm md:text-base">Our energy-dense puppy kibble carefully balances calcium, vitamins, and minerals to help build strong bones and support your puppy’s rapid growth and development.</p>
-    </div>
-  </div>
-</section>
-
-<Quote />
-
-<Howitworks />
-
-<!-- Afventer at kode for mobil da den ikke er lavet i prototypen endnu -->
-<section class="mx-5 md:mx-custom104 mb-16 md:mb-44" id="supportpuppy">
-  <div class="md:grid grid-cols-2 gap-custom90">
-    <div class="">
-      <h1 class="text-2xl md:text-custom54 font-paytone uppercase md:max-w-3xl md:pb-16">SUPPORTING YOUR PUPPY AS THEY GROW</h1>
-      <div class="flex">
-        <Image class="w-1/2" src={beaglepuppy} alt="Beagle puppy" />
-        <Image class="w-1/2" src={beagleadult} alt="Beagle adult" />
+  <section class="bg-SalmonTreat-200 px-5 md:px-custom104 py-10 md:py-32 mb-16 md:mb-44" id="puppyhero">
+    <div class="md:grid grid-cols-2">
+      <div>
+        <h1 class="text-5xl md:text-custom54 pb-8 md:pb-16 font-paytone uppercase">WHAT MAKES THE BEST PUPPY FOOD?</h1>
+        <p class="text-base md:text-2xl pb-8">Our food gives your puppy the nutrition they need to run and roll and grow and learn. Tell us about your pup and we'll create a recipe of dry food that develops with them as they grow.</p>
+        <p class="text-base md:text-2xl pb-8 md:pb-12">You get clear portion recommendations and our adjustable scoop too, so it's easy to serve the right amount every day - for a healthy, happy puppy.</p>
+        <a href="/form">
+          <Button variant="primary" size="desktoplarge">Start Trial</Button>
+        </a>
+      </div>
+      <div>
+        <Image class="" src={puppyhero} alt="Dalmatian puppy" />
       </div>
     </div>
-    <div>
-      <h2 class="text-2xl md:text-custom40 md:pb-4">6-14 Weeks Old</h2>
-      <p class="text-sm md:text-xl md:pb-16">A delivery every fortnight ensures your growing pup gets the nutrition they need, right when they need it.</p>
-      <h2 class="text-2xl md:text-custom40 md:pb-4">14 Weeks Onwards</h2>
-      <p class="text-sm md:text-xl md:pb-16">A monthly delivery tailored to your pup, gradually introducing new kibble types based on their size, breed, and activity level.</p>
-      <h2 class="text-2xl md:text-custom40 md:pb-4">Adulthood</h2>
-      <p class="text-sm md:text-xl">Ongoing support for life means we adjust your dog's recipe as they grow, so you’ll never need to worry about switching food.</p>
+  </section>
+
+  <section class="mx-5 md:mx-custom104 mb-16 md:mb-44" id="eathealthy">
+    <h1 class="text-2xl md:text-custom54 font-paytone uppercase md:max-w-3xl pb-6 md:pb-16">YOU SHOULDN’T BE THE ONLY ONE EATING HEALTHY</h1>
+    <div class="flex flex-col md:grid grid-cols-3 md:gap-16">
+      <div class="order-2 md:order-1">
+        <h3 class="text-2xl md:text-custom32 pb-5">Immune system</h3>
+        <p class="pb-8 md:pb-custom104 text-sm md:text-base">Beta-glucans and nucleotides help to enhance and regulate your puppy’s immune system - and offer extra protection by improving their response to vaccinations too.</p>
+        <h3 class="text-2xl md:text-custom32 pb-5">Mental development</h3>
+        <p class="pb-8 md:pb-0 text-sm md:text-base">Not many puppy foods include DHA omega-3. But ours does. This fatty acid is proven to aid learning and socialisation, and reduce the risk of behavioural problems.</p>
+      </div>
+      <div class="order-1 md:order-2">
+        <Image class="pb-8 md:pb-0" src={foodbowl} alt="Foodbowl" />
+      </div>
+      <div class="order-3">
+        <h3 class="text-2xl md:text-custom32 pb-5">Digestive system</h3>
+        <p class="pb-8 md:pb-custom104 text-sm md:text-base">We use chicken to aid your pup’s delicate digestion. And we also include prebiotics like FOS and MOS to help promote good bacteria - this is very important for your puppies.</p>
+        <h3 class="text-2xl md:text-custom32 pb-5">Energy for growth</h3>
+        <p class="text-sm md:text-base">Our energy-dense puppy kibble carefully balances calcium, vitamins, and minerals to help build strong bones and support your puppy’s rapid growth and development.</p>
+      </div>
     </div>
-  </div>
-</section>
+  </section>
 
-<Otheroptions />
+  <Quote />
 
-<Subscription />
+  <Howitworks />
 
+  <!-- Afventer at kode for mobil da den ikke er lavet i prototypen endnu -->
+  <section class="mx-5 md:mx-custom104 mb-16 md:mb-44" id="supportpuppy">
+    <div class="md:grid grid-cols-2 gap-custom90">
+      <div class="">
+        <h1 class="text-2xl md:text-custom54 font-paytone uppercase md:max-w-3xl md:pb-16">SUPPORTING YOUR PUPPY AS THEY GROW</h1>
+        <div class="flex">
+          <Image class="w-1/2" src={beaglepuppy} alt="Beagle puppy" />
+          <Image class="w-1/2" src={beagleadult} alt="Beagle adult" />
+        </div>
+      </div>
+      <div>
+        <h2 class="text-2xl font-bold md:pb-4">6-14 Weeks Old</h2>
+        <p class="text-sm md:text-xl md:pb-16">A delivery every fortnight ensures your growing pup gets the nutrition they need, right when they need it.</p>
+        <h2 class="text-2xl md:text-custom40 md:pb-4">14 Weeks Onwards</h2>
+        <p class="text-sm md:text-xl md:pb-16">A monthly delivery tailored to your pup, gradually introducing new kibble types based on their size, breed, and activity level.</p>
+        <h2 class="text-2xl md:text-custom40 md:pb-4">Adulthood</h2>
+        <p class="text-sm md:text-xl">Ongoing support for life means we adjust your dog's recipe as they grow, so you’ll never need to worry about switching food.</p>
+      </div>
+    </div>
+  </section>
+
+  <Otheroptions />
+
+  <Subscription />
 </MainLayout>

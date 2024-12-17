@@ -13,38 +13,38 @@ import Subscription from "../components/Subscription.astro";
 ---
 
 <MainLayout title="Tails.com">
-  <section class="bg-SalmonTreat-200 md:pl-custom104 mb-16 md:mb-44" id="themenuhero">
-    <div class="md:grid grid-cols-2">
-      <div class="py-10 md:py-32 mx-5">
-        <h2 class="text-5xl md:text-custom54 pb-8 md:pb-16 font-paytone uppercase">FIND YOUR PUPPY'S NEW FAVOURITE MEAL</h2>
-        <p class="text-sm md:text-xl pb-8 md:pb-16">Prioritize your dog's health with nutrition designed for their specific needs.</p>
-        <a href="/">
-          <Button variant="primary" size="desktoplarge">Our Ingredients</Button>
-        </a>
-      </div>
-      <div>
-        <Image class="hidden md:block" src={themenuhero} alt="Dalmatian dog" />
-      </div>
+
+<!-- paddingen mellem p og knappen skal måske ændres når knappen kommer ind så det er 128 efter knappen  -->
+<section class="bg-SalmonTreat-200 md:pl-custom104 mb-16 md:mb-44" id="themenuhero">
+  <div class="md:grid grid-cols-2">
+    <div class="py-10 md:py-32 mx-5">
+      <h1 class="text-5xl md:text-custom54 pb-8 md:pb-16 font-paytone uppercase">FIND YOUR PUP´S NEW FAVOURITE MEAL</h1>
+      <p class="text-base md:text-2xl pb-8 md:pb-12">Prioritize your dog's health with nutrition designed for their specific needs.</p>
     </div>
-  </section>
+    <div>
+      <Image class="hidden md:block" src={themenuhero} alt="Dalmatian dog" />
+    </div>
+  </div>
+</section>
 
 <section class="mx-5 md:mx-custom104 mb-44 md:grid grid-cols-2 gap-custom90" id="betteringredients">
   <div>
-    <h2 class="text-2xl md:text-custom54 font-paytone md:max-w-3xl pb-6 md:pb-16 uppercase">Better ingredients mean tastier food</h2>
-    <p class="pb-6 text-xs md:text-base">At tails.com, we carefully craft every recipe with ingredients that matter. From premium meats and <strong>fish</strong> packed with <strong>protein</strong> and <strong>essential fatty acids</strong> to <strong>wholesome vegetables</strong> and <strong>grains</strong> that provide <strong>energy</strong> and <strong>fiber</strong>, every element supports your dog’s health and well-being.</p>
-    <p class="pb-6 text-xs md:text-base">We also include <strong>vitamins</strong>, <strong>minerals</strong>, and <strong>prebiotics</strong> to boost immunity, aid digestion, and support healthy joints. The result is a balanced, delicious meal tailored to your dog’s specific needs, ensuring they stay happy, healthy, and full of energy every day.</p>
-    <p class="pb-8 md:pb-12 text-xs md:text-base">All our ingredients are sourced in the UK and the EU.</p>
+    <h2 class="text-2xl md:text-custom54 font-paytone md:max-w-3xl pb-4 md:pb-8 uppercase">Better ingredients mean tastier food</h2>
+    <p class="pb-4 text-xs md:text-base">At tails.com, we carefully craft every recipe with ingredients that matter. From premium meats and <strong>fish</strong> packed with <strong>protein</strong> and <strong>essential fatty acids</strong> to <strong>wholesome vegetables</strong> and <strong>grains</strong> that provide <strong>energy</strong> and <strong>fiber</strong>, every element supports your dog’s health and well-being.</p>
+    <p class="pb-4 text-xs md:text-base">We also include <strong>vitamins</strong>, <strong>minerals</strong>, and <strong>prebiotics</strong> to boost immunity, aid digestion, and support healthy joints. The result is a balanced, delicious meal tailored to your dog’s specific needs, ensuring they stay happy, healthy, and full of energy every day.</p>
+    <p class="pb-4 text-xs md:text-base">All our ingredients are sourced in the UK and the EU.</p>
   </div>
   <div><Image src={betteringredients} alt="tails" /></div>
 </section>
 
-  <Ourproducts />
+<Ourproducts />
 
-  <Quote />
+<Quote />
 
-  <Addons />
+<Addons />
 
-  <Ourteam />
+<Ourteam />
 
-  <Subscription />
+<Subscription />
+
 </MainLayout>

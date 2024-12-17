@@ -3,24 +3,26 @@
 ---
 
 <section class="bg-BarkingAtTheMoon-500 py-8 px-5 md:p-custom104 mb-16 md:mb-44">
-  <h2 class="text-FluffyCloud-300 text-2xl text-center md:text-custom54 md:text-left font-paytone uppercase relative">YOUR BEST FRIEND DESERVES</h2>
-  <div id="kinetic">
-    <h2 class="text-SalmonTreat-500 absolute opacity-100 transition-opacity duration-1000 ease-in-out">A Shiny Coat</h2>
-    <h2 id="kinetic" class="text-SalmonTreat-500 absolute opacity-0 transition-opacity duration-1000 ease-in-out">Healthy teeth</h2>
-  </div>
+  <h2 class="text-FluffyCloud-300 text-2xl text-center md:text-custom54 md:text-left font-paytone uppercase relative">YOUR BEST FRIEND DESERVES <span id="dynamic-text" class="text-SalmonTreat-500 text-2xl text-center md:text-custom54 md:text-left font-paytone uppercase">A Shiny Coat</span></h2>
+  
 </section>
 
 <script>
-  const kinetic = document.querySelectorAll("#kinetic h2");
+  const texts = ["A Shiny Coat", "Cleaner Teeth", "A Happy Tummy", "Joint Support", "The Perfect Fit"];
+  const dynamicText = document.getElementById("dynamic-text");
   let currentIndex = 0;
 
-  function fadeText() {
-    kinetic[currentIndex].classList.remove("opacity-100");
-    kinetic[currentIndex].classList.add("opacity-0");
-    currentIndex = (currentIndex + 1) % kinetic.length;
-    kinetic[currentIndex].classList.remove("opacity-0");
-    kinetic[currentIndex].classList.add("opacity-100");
+  function switchText() {
+    dynamicText.classList.remove("opacity-100");
+    dynamicText.classList.add("opacity-0");
+
+    setTimeout(() => {
+      currentIndex = (currentIndex + 1) % texts.length;
+      dynamicText.textContent = texts[currentIndex];
+      dynamicText.classList.remove("opacity-0");
+      dynamicText.classList.add("opacity-100");
+    }, 200);
   }
 
-  setInterval(fadeText, 2000); // Changes image every 2 seconds
+  setInterval(switchText, 2000);
 </script>

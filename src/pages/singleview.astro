@@ -80,3 +80,9 @@ import Otheroptions from "../components/Otheroptions.astro";
 
   <Subscription />
 </MainLayout>
+
+<script>
+  import { animate, stagger, inView, scroll } from "motion";
+
+  animate("body", { opacity: [0, 1] }, { duration: 1.5 });
+</script>

@@ -6,17 +6,17 @@ import logo from "../assets/images/Logo.webp";
 <div x-data="{ showmenu: false }" class="w-full">
   <div id="navbar" class="flex flex-row justify-between px-8 py-6">
     <div id="logo">
-      <a href="#" class="flex items-center">
+      <a href="/" class="flex items-center">
         <Image class="w-auto h-14" src={logo} alt="Logo" />
       </a>
     </div>
 
     <nav id="desktopmenu" class="hidden lg:block">
       <ul class="flex flex-row gap-12 text-xl font-medium">
-        <li class=""><a href="#" class="no-underline">Pricing</a></li>
-        <li class=""><a href="#">The Menu</a></li>
-        <li class=""><a href="#">Our Story</a></li>
-        <li class=""><a href="#">Get Started</a></li>
+        <li class=""><a href="/pricing" class="no-underline">Pricing</a></li>
+        <li class=""><a href="/themenu">The Menu</a></li>
+        <li class=""><a href="/">Our Story</a></li>
+        <li class=""><a href="/form">Get Started</a></li>
       </ul>
     </nav>
 

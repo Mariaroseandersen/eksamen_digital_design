@@ -29,7 +29,7 @@ import some10 from "../assets/images/some10.webp";
 
 <MainLayout title="Tails.com">
   <section id="hero" class="mx-5 md:mx-custom104 lg:grid grid-cols-3">
-    <div class="col-span-2">
+    <div class="lg:col-span-2">
       <h1 class="text-5xl md:text-8xl font-paytone uppercase md:max-w-3xl pb-8 md:pb-16 pt-8 md:pt-16">Real <span class="text-SalmonTreat-500">Food</span> for Real Friends</h1>
       <p class="text-sm md:text-xl pb-8 md:pb-16 md:max-w-2xl">
         We craft <strong>unique recipes</strong> tailored to your dog’s needs. Backed by science and delivered to your door each month through our easy subscription, your dog gets the <strong>perfect meals</strong>, right on time.
@@ -37,12 +37,8 @@ import some10 from "../assets/images/some10.webp";
       </p>
     </div>
 
-    <div id="herodogs" class="relative flex items-end justify-center">
-      <Image src={herodog1} alt="Dog Portrait 1" class="absolute bottom-0 w-[600px] h-auto object-contain opacity-100 transition-opacity duration-1000 ease-in-out" />
-      <Image src={herodog2} alt="Dog Portrait 2" class="absolute bottom-0 w-[600px] h-auto object-contain opacity-0 transition-opacity duration-1000 ease-in-out" />
-      <Image src={herodog3} alt="Dog Portrait 2" class="absolute bottom-0 w-[600px] h-auto object-contain opacity-0 transition-opacity duration-1000 ease-in-out" />
-      <Image src={herodog4} alt="Dog Portrait 2" class="absolute bottom-0 w-[600px] h-auto object-contain opacity-0 transition-opacity duration-1000 ease-in-out" />
-      <Image src={herodog5} alt="Dog Portrait 2" class="absolute bottom-0 w-[600px] h-auto object-contain opacity-0 transition-opacity duration-1000 ease-in-out" />
+    <div id="herodogs" class="mt-8 md:mt-0 flex items-end justify-center">
+      <img id="herodogimage" src="/herodog1.webp" alt="Dog Portrait" class="w-[300px] sm:w-[350px] md:w-[450px] h-auto opacity-100 transition-opacity duration-1000 ease-in-out" />
     </div>
   </section>
 
@@ -93,16 +89,25 @@ import some10 from "../assets/images/some10.webp";
 
   animate("body", { opacity: [0, 1] }, { duration: 1.5 });
 
-  const images = document.querySelectorAll("#herodogs img");
-  let currentIndex = 0;
+  const imagePaths = ["/herodog1.webp", "/herodog2.webp", "/herodog3.webp", "/herodog4.webp", "/herodog5.webp"];
 
-  function fadeImages() {
-    images[currentIndex].classList.remove("opacity-100");
-    images[currentIndex].classList.add("opacity-0");
-    currentIndex = (currentIndex + 1) % images.length;
-    images[currentIndex].classList.remove("opacity-0");
-    images[currentIndex].classList.add("opacity-100");
+  const heroImage = document.getElementById("herodogimage");
+  let currentImageIndex = 0;
+
+  function fadeImage() {
+    if (heroImage instanceof HTMLImageElement) {
+      heroImage.classList.remove("opacity-100");
+      heroImage.classList.add("opacity-0");
+
+      setTimeout(() => {
+        currentImageIndex = (currentImageIndex + 1) % imagePaths.length;
+        heroImage.src = imagePaths[currentImageIndex];
+
+        heroImage.classList.remove("opacity-0");
+        heroImage.classList.add("opacity-100");
+      }, 500);
+    }
   }
 
-  setInterval(fadeImages, 2000); // Changes image every 2 seconds
+  setInterval(fadeImage, 2000);
 </script>

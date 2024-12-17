@@ -12,12 +12,14 @@ import Subscription from "../components/Subscription.astro";
 ---
 
 <MainLayout title="Tails.com">
-  <!-- paddingen mellem p og knappen skal måske ændres når knappen kommer ind så det er 128 efter knappen  -->
-  <section class="bg-SalmonTreat-200 md:pl-custom104 mb-16 md:mb-44" id="pricinghero">
+  <section class="bg-SalmonTreat-200 md:pl-custom104 mb-16 md:mb-20" id="pricinghero">
     <div class="md:grid grid-cols-2">
       <div class="py-10 md:py-32 mx-5">
-        <h1 class="text-5xl md:text-custom54 pb-8 md:pb-16 font-paytone uppercase">AFFORDABLE CARE, TAILORED TO YOUR DOG</h1>
-        <p class="text-base md:text-2xl pb-8 md:pb-12">Every dog is unique, and so is the cost of their perfect meal plan.</p>
+        <h2 class="text-5xl md:text-custom54 pb-8 md:pb-16 font-paytone uppercase">AFFORDABLE CARE, TAILORED TO YOUR DOG</h2>
+        <p class="text-sm md:text-xl pb-8 md:pb-16">Every dog is unique, and so is the cost of their perfect meal plan.</p>
+        <a href="/form">
+          <Button variant="primary" size="large">Start Trial</Button>
+        </a>
       </div>
       <div class="">
         <Image class="hidden md:block h-full object-cover" src={pricinghero} alt="Dog with tounge out" />

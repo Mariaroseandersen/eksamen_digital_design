@@ -39,10 +39,11 @@ import Button from "../components/Button.astro";
     <article>
       <Image src={treats} alt="image of dog treats" class="w-48 m-auto pb-4" />
     </article>
-    <article class="flex flex-col items-center justify-center text-center md:text-start">
+    <article class="flex flex-col justify-center text-center md:text-start">
       <h3 class="text-sm md:text-xl font-bold pb-3 md:pb-4">Has your dog been a good pup?</h3>
       <p class="text-xs md:text-base pb-6 md:pb-12">Add in yummy wet food and healthy treats. We’ll adjust your dog’s feeding plan to suit.</p>
-      <Button variant="subprimary" size="small">See Our Add-ons</Button>
+      <div><Button variant="subprimary" size="small">See Our Add-ons</Button></div>
+      
     </article>
   </div>
 </section>

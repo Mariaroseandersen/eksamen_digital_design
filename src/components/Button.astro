@@ -20,27 +20,24 @@ const sizeClasses = {
 ---
 
 <!-- Sæt classes for den pågældende knap sammen ved hjælp af Astros class:list -->
-<button class:list={[buttonStyling, variantClasses[variant], sizeClasses[size]]}>
+<button class:list={[buttonStyling, variantClasses[variant], sizeClasses[size], "pulseButton"]}>
   <slot />
 </button>
 
-<!-- Primær knap - desktop large & small  -->
-<!-- <Button variant="primary" size="large">Knaptekst</Button>
-<Button variant="primary" size="small">Knaptekst</Button>
+<script>
+  import { animate } from "motion";
 
-<Button variant="primary" size="large">Knaptekst</Button>
-<Button variant="primary" size="small">Knaptekst</Button> -->
+  document.addEventListener("DOMContentLoaded", () => {
+    const buttons = document.querySelectorAll(".pulseButton");
 
-<!-- Sekundær knap - desktop large & small  -->
-<!-- <Button variant="secondary" size="large">Knaptekst</Button>
-<Button variant="secondary" size="small">Knaptekst</Button>
-
-<Button variant="secondary" size="large">Knaptekst</Button>
-<Button variant="secondary" size="small">Knaptekst</Button> -->
-
-<!-- SUB primær knap - desktop large & small  -->
-<!-- <Button variant="subprimary" size="large">Knaptekst</Button>
-<Button variant="subprimary" size="small">Knaptekst</Button>
-
-<Button variant="subprimary" size="large">Knaptekst</Button>
-<Button variant="subprimary" size="small">Knaptekst</Button> -->
+    buttons.forEach((button) => {
+      button.addEventListener("mouseenter", () => {
+        animate(
+          button,
+          { scale: [1, 1.2, 1] }, // Pulse effect
+          { duration: 1, easing: "ease-in-out" }
+        );
+      });
+    });
+  });
+</script>

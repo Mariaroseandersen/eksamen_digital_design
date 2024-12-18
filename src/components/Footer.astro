@@ -3,9 +3,96 @@ import { Image } from "astro:assets";
 import footerdog from "../assets/images/footerdog.webp";
 import Button from "../components/Button.astro";
 import mentions from "../assets/images/mentions.png";
+import trustpilotrating from "../assets/images/trustpilotrating.webp";
+import footerform1 from "../assets/images/footerform1.png";
 import tooth from "../assets/images/tooth.svg";
+import nograin from "../assets/images/nograin.svg";
+import scale from "../assets/images/scale.svg";
+import skin from "../assets/images/skin.svg";
 ---
 
+<article class="md:grid grid-cols-2 gap-16 mx-5 md:mx-custom104 pt-20 relative">
+  <!-- Tekstindhold -->
+  <div>
+    <h3 class="pb-4 md:pb-8 text-base md:text-2xl font-bold uppercase">DON'T MISS OUT ON TREATS FROM OUR NEWSLETTER</h3>
+    <div class="flex items-center bg-[#f5e4d0] rounded-full border border-gray-400 px-4 py-2 w-full max-w-lg">
+      <input type="email" placeholder="Enter your email address" class="flex-grow text-xs md:text-base bg-transparent outline-none border-none text-gray-700 px-4" />
+      <Button variant="subprimary" size="small">Sign Up</Button>
+    </div>
+  </div>
+
+  <!-- Tekstliste -->
+  <div>
+    <p class="text-base md:text-2xl pb-8 pt-8 md:pt-0">We care about you and your dog and we believe that <strong>a healthy pup</strong> = <strong>a happy life</strong></p>
+    <p class="pb-5 text-sm md:text-xl">Learn more about how our products can support your doggo’s health:</p>
+    <ul class="font-bold">
+      <li class="pb-3 flex gap-3 items-center">
+        <Image src={tooth} alt="tooth" class="w-[40px] md:w-[60px]" />
+        <p class="text-sm md:text-xl">Dental hygiene</p>
+      </li>
+      <li class="pb-3 flex gap-3 items-center">
+        <Image src={nograin} alt="grain" class="w-[40px] md:w-[60px]" />
+        <p class="text-sm md:text-xl">Grain free</p>
+      </li>
+      <li class="pb-3 flex gap-3 items-center">
+        <Image src={scale} alt="scale" class="w-[40px] md:w-[60px]" />
+        <p class="text-sm md:text-xl">Weight management</p>
+      </li>
+      <li class="pb-3 flex gap-3 items-center">
+        <Image src={skin} alt="skin" class="w-[40px] md:w-[60px]" />
+        <p class="text-sm md:text-xl">Sensitive skin</p>
+      </li>
+    </ul>
+  </div>
+
+  <!-- Hundebilledet flyttes kun på mobil -->
+  <Image src={footerdog} alt="picture of dog peeking up" class="w-[400px] h-auto md:-mt-[330px] md:ml-12 order-last md:order-none" />
+</article>
+
+<article class="relative pt-12">
+  <!-- Billedet sættes som baggrund og strækkes ud -->
+  <Image src={footerform1} alt="background form" class="absolute inset-0 w-full h-[1000px] md:h-auto z-0 -mt-[228px]" />
+
+  <!-- Indholdet placeres ovenpå billedet -->
+  <div class="relative z-10 mx-5 md:mx-custom104 md:grid grid-cols-3 gap-8 pt-16">
+    <div>
+      <p class="text-base md:text-2xl font-bold pb-4">Learn More</p>
+      <p class="pb-3 text-xs md:text-base">Social Responsibility</p>
+      <p class="pb-3 text-xs md:text-base">Blog</p>
+      <p class="pb-3 text-xs md:text-base">Careers</p>
+      <p class="pb-3 text-xs md:text-base">Press</p>
+    </div>
+    <div>
+      <p class="text-base md:text-2xl font-bold pb-4">Our Services</p>
+      <p class="pb-3 text-xs md:text-base">Terms & Conditions</p>
+      <p class="pb-3 text-xs md:text-base">Privacy Policy</p>
+      <p class="pb-3 text-xs md:text-base">Cookie Policy</p>
+      <p class="pb-3 text-xs md:text-base">FAQ</p>
+    </div>
+    <div>
+      <p class="text-base md:text-2xl font-bold pb-4">Follow Us on Our Socials</p>
+      <div class="flex gap-4 pb-4">
+        <a href="#"></a>
+        <a href="#"></a>
+        <a href="#"></a>
+        <a href="#"></a>
+      </div>
+      <p class="text-base md:text-2xl font-bold pb-4">Our Customers and Their Pups Love Us!</p>
+      <div class="flex items-center gap-1">
+        <Image src={trustpilotrating} alt="background form" class="w-44 h-full" />
+        <span class="text-xl">4.4</span>
+      </div>
+    </div>
+  </div>
+
+  <!-- Sektion med avisomtaler -->
+  <div class="relative z-10 mx-5 md:mx-custom104 pt-20">
+    <p class="text-base md:text-2xl font-bold pb-4">Woof! Not to Brag But We've Been Featured in...</p>
+    <Image src={mentions} alt="logos from newspapers" class="w-[700px] h-auto -ml-6" />
+  </div>
+</article>
+
+<!-- <Image src={footervector} alt="picture of dog peeking up" class="" />
 <article class="md:grid grid-cols-2 gap-8 mx-5 md:mx-custom104 pt-20">
   <div>
     <h3 class="pb-6 text-2xl md:text-custom32 font-bold uppercase">DON´T MISS OUT ON TREATS FROM OUR NEWSLETTER</h3>
@@ -16,10 +103,10 @@ import tooth from "../assets/images/tooth.svg";
     <p class="text-xl md:text-2xl pb-5">We care about you and your dog and we believe that <strong>a healthy pup</strong> = <strong>a happy life</strong></p>
     <p class="pb-4">Learn more about how our products can support your doggo’s health:</p>
     <ul class="font-bold">
-      <li class="pb-3 flex"><Image src={tooth} alt="tooth" class="w-[50px]" /><p>Dental hygiene</p></li>
-      <li class="pb-3">Weight management</li>
-      <li class="pb-3">Grain free</li>
-      <li class="pb-3">Sensitive skin</li>
+      <li class="pb-3 flex gap-2 items-center"><Image src={tooth} alt="tooth" class="w-[60px]" /><p>Dental hygiene</p></li>
+      <li class="pb-3 flex gap-2 items-center"><Image src={nograin} alt="grain" class="w-[60px]" /><p>Weight management</p></li>
+      <li class="pb-3 flex gap-2 items-center"><Image src={scale} alt="scale" class="w-[60px]" /><p>Grain free</p></li>
+      <li class="pb-3 flex gap-2 items-center"><Image src={skin} alt="skin" class="w-[60px]" /><p>Sensitive skin</p></li>
     </ul>
   </div>
 </article>
@@ -50,4 +137,4 @@ import tooth from "../assets/images/tooth.svg";
     <p class="font-bold pb-4">Woof! Not to Brag But We've Been Featured in...</p>
     <Image src={mentions} alt="logos from newspapers" class="w-[500px] h-auto" />
   </div>
-</article>
+</article> -->

@@ -18,7 +18,7 @@ import Subscription from "../components/Subscription.astro";
         <h2 class="text-5xl md:text-custom54 pb-8 md:pb-16 font-paytone uppercase">AFFORDABLE CARE, TAILORED TO YOUR DOG</h2>
         <p class="text-sm md:text-xl pb-8 md:pb-16">Every dog is unique, and so is the cost of their perfect meal plan.</p>
         <a href="/form">
-          <Button variant="primary" size="large">Start Trial</Button>
+          <Button variant="subprimary" size="large">Start Trial</Button>
         </a>
       </div>
       <div class="">
@@ -81,35 +81,35 @@ import Subscription from "../components/Subscription.astro";
         <h3 class="stagger-item text-base md:text-2xl pb-0 md:pb-3 font-bold">Supplements</h3>
         <p class="stagger-item text-base pb-8 md:pb-0">For dogs that need extra support</p>
       </div>
+
+      <Reviews />
+
+      <Ourproducts />
+
+      <Subscription />
     </div>
-  </section>
 
-  <Reviews />
+    <script>
+      import { animate, stagger, inView, scroll } from "motion";
 
-  <Ourproducts />
+      // Initial body fade-in animation
+      animate("body", { opacity: [0, 1] }, { duration: 2 }); // Øget duration for langsommere fade-in
 
-  <Subscription />
-</MainLayout>
-
-<script>
-  import { animate, stagger, inView, scroll } from "motion";
-
-  // Initial body fade-in animation
-  animate("body", { opacity: [0, 1] }, { duration: 2 }); // Øget duration for langsommere fade-in
-
-  // Stagger animation for .stagger-container (the entire article)
-  inView(".stagger-container", () => {
-    animate(
-      ".stagger-item",
-      {
-        opacity: [0, 1],
-        transform: ["translateY(20px)", "translateY(0)"],
-      },
-      {
-        delay: stagger(0.6, { start: 0.3 }), // Øget forsinkelse mellem animationer
-        duration: 1.5, // Øget duration for langsommere animationer
-        easing: "ease-out", // Smooth easing
-      }
-    );
-  });
-</script>
+      // Stagger animation for .stagger-container (the entire article)
+      inView(".stagger-container", () => {
+        animate(
+          ".stagger-item",
+          {
+            opacity: [0, 1],
+            transform: ["translateY(20px)", "translateY(0)"],
+          },
+          {
+            delay: stagger(0.6, { start: 0.3 }), // Øget forsinkelse mellem animationer
+            duration: 1.5, // Øget duration for langsommere animationer
+            easing: "ease-out", // Smooth easing
+          }
+        );
+      });
+    </script>
+  </section></MainLayout
+>

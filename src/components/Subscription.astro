@@ -3,11 +3,23 @@ import Button from "../components/Button.astro";
 ---
 
 <section class="bg-BarkingAtTheMoon-500 py-8 px-5 md:p-custom104">
-  <h2 class="text-FluffyCloud-300 pb-4 md:pb-8 text-center text-2xl md:text-custom54 font-paytone uppercase">Start your pup’s <span class="text-SalmonTreat-500">subscription</span> today!</h2>
-  <p class="text-FluffyCloud-300 pb-6 md:pb-12 text-xs md:text-xl text-center">Enticing taste. Energizing nutrition. Enriching variety. Excited dogs.</p>
-  <div class="text-center">
+  <h2 class="text-FluffyCloud-300 pb-4 md:pb-8 text-center text-2xl md:text-custom54 font-paytone uppercase animationinviewfade">Start your pup’s <span class="text-SalmonTreat-500">subscription</span> today!</h2>
+  <p class="text-FluffyCloud-300 pb-6 md:pb-12 text-xs md:text-xl text-center animationinviewfade">Enticing taste. Energizing nutrition. Enriching variety. Excited dogs.</p>
+  <div class="text-center animationinviewfade">
     <a href="/">
       <Button variant="primary" size="small">Start Trial</Button>
     </a>
   </div>
 </section>
+
+<script>
+  import { animate, inView } from "motion";
+
+  // Inview animation fade in + return
+  inView(".animationinviewfade", ({ target }) => {
+    animate(target, { opacity: [0, 1] }, { duration: 2 });
+    return () => {
+      animate(target, { opacity: [0, 1] });
+    };
+  });
+</script>

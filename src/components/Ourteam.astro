@@ -9,10 +9,10 @@ import helpdog from "../assets/images/helpdog.webp";
 ---
 
 <section class="mx-5 md:px-custom104">
-  <h2 class="text-2xl font-paytone uppercase md:text-custom54 sm:max-w-lg lg:max-w-3xl pb-4 md:pb-8">WE KNOW WHAT WE'RE DOING AND WE'RE PASSIONATE ABOUT IT</h2>
-  <p class="text-sm md:text-xl sm:max-w-xl lg:max-w-3xl pb-8 md:pb-16">Behind every tailored meal is a passionate team of experts dedicated to improving dogs’ lives. From nutritionists to developers, meet the people who make tails.com’s personalized approach possible.</p>
+  <h2 class="text-2xl font-paytone uppercase md:text-custom54 sm:max-w-lg lg:max-w-3xl pb-4 md:pb-8 animationinviewfade">WE KNOW WHAT WE'RE DOING AND WE'RE PASSIONATE ABOUT IT</h2>
+  <p class="text-sm md:text-xl sm:max-w-xl lg:max-w-3xl pb-8 md:pb-16 animationinviewfade">Behind every tailored meal is a passionate team of experts dedicated to improving dogs’ lives. From nutritionists to developers, meet the people who make tails.com’s personalized approach possible.</p>
 
-  <div class="pb-6 md:pb-12 md:grid grid-cols-2 lg:grid-cols-3 gap-custom90">
+  <div class="pb-6 md:pb-12 md:grid grid-cols-2 lg:grid-cols-3 gap-custom90 animationinviewfade">
     <div>
       <Image class="pb-4 md:pb-10 w-[350px]" src={sean1} alt="Sean McCormack, Head Vet" />
       <h3 class="pb-3 text-base md:text-2xl font-bold">Sean McCormack</h3>
@@ -38,14 +38,14 @@ import helpdog from "../assets/images/helpdog.webp";
     </div>
   </div>
 
-  <div class="text-center pb-16 md:pb-custom90">
+  <div class="text-center pb-16 md:pb-custom90 animationinviewfade">
     <a href="/">
       <Button variant="primary" size="small">More About Us</Button>
     </a>
   </div>
 
   <article class="md:grid grid-cols-2">
-    <div class="pb-12 md:pb-custom20">
+    <div class="pb-12 md:pb-custom20 animationinviewfade">
       <h3 class="text-base md:text-2xl font-bold pb-6 md:pb-8">We are here for you</h3>
       <p class="text-xs md:text-base pb-4 md:pb-4">
         Got questions? We get it – as fellow dog owners, we’ve been there too. That’s why we’ve gathered all the tips and tricks we’ve learned along the way in the
@@ -60,3 +60,15 @@ import helpdog from "../assets/images/helpdog.webp";
     </div>
   </article>
 </section>
+
+<script>
+  import { animate, inView } from "motion";
+
+  // Inview animation fade in + return
+  inView(".animationinviewfade", ({ target }) => {
+    animate(target, { opacity: [0, 1] }, { duration: 2 });
+    return () => {
+      animate(target, { opacity: [0, 1] });
+    };
+  });
+</script>

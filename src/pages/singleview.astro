@@ -1,58 +1,65 @@
 ---
 import MainLayout from "../layouts/MainLayout.astro";
 import Button from "../components/Button.astro";
-import Link from "../components/Link.astro";
 import { Image } from "astro:assets";
 import puppy from "../assets/images/puppy.webp";
-import foodbowl from "../assets/images/foodbowl.webp";
 import beaglepuppy from "../assets/images/beaglepuppy.webp";
 import beagleadult from "../assets/images/beagleadult.webp";
-import Quote from "../components/Quote.astro";
+import Quote2 from "../components/Quote2.astro";
 import Subscription from "../components/Subscription.astro";
 import Howitworks from "../components/Howitworks.astro";
 import Otheroptions from "../components/Otheroptions.astro";
+import circlebowl from "../assets/images/tailsfoodbowl.webp";
+import circlecontent from "../assets/images/foodbowlcircle.webp";
 ---
 
 <MainLayout title="Tails.com">
-  <!-- Padding og billede skal ændres i denne sektion -->
-  <section class="bg-SalmonTreat-200 px-5 md:px-custom104 pt-10 md:pt-32 mb-16 md:mb-44" id="puppyhero">
-    <div class="md:grid grid-cols-2">
-      <div>
+  <section class="bg-SalmonTreat-200 px-5 md:px-custom104 pt-4 md:pt-16 mb-16 md:mb-44" id="puppyhero">
+    <div class="lg:grid grid-cols-2">
+      <div class="animationinviewfade">
         <h2 class="text-5xl md:text-custom54 pb-8 md:pb-16 font-paytone uppercase">WHAT MAKES THE BEST PUPPY FOOD?</h2>
-        <p class="text-sm md:text-xl pb-8">Our food gives your puppy the nutrition they need to run and roll and grow and learn. Tell us about your pup and we'll create a recipe of dry food that develops with them as they grow.</p>
+        <p class="text-sm md:text-xl pb-4 md:pb-8">Our food gives your puppy the nutrition they need to run and roll and grow and learn. Tell us about your pup and we'll create a recipe of dry food that develops with them as they grow.</p>
         <p class="text-sm md:text-xl pb-8 md:pb-16">You get clear portion recommendations and our adjustable scoop too, so it's easy to serve the right amount every day - for a healthy, happy puppy.</p>
-        <a href="/form">
-          <Button variant="subprimary" size="large">Start Trial</Button>
-        </a>
+        <div class="pb-4 md:pb-16 flex items-center md:items-start justify-center md:justify-start">
+          <a href="/form">
+            <Button variant="subprimary" size="large">Start Trial</Button>
+          </a>
+        </div>
       </div>
-      <div>
-        <Image class="hidden md:block w-full h-auto" src={puppy} alt="Puppy" />
+      <div class="flex items-end justify-center">
+        <Image class="hidden lg:block w-full h-auto" src={puppy} alt="Puppy" />
       </div>
     </div>
   </section>
 
   <section class="mx-5 md:mx-custom104 mb-16 md:mb-44" id="eathealthy">
-    <h2 class="text-2xl md:text-custom54 font-paytone uppercase md:max-w-3xl pb-4 md:pb-16">YOU SHOULDN’T BE THE ONLY ONE EATING HEALTHY</h2>
-    <div class="flex flex-col md:grid grid-cols-3 md:gap-16">
-      <div class="order-2 md:order-1">
+    <h2 class="text-2xl md:text-custom54 font-paytone uppercase md:max-w-3xl pb-4 md:pb-16 animationinviewfade">YOU SHOULDN’T BE THE ONLY ONE EATING HEALTHY</h2>
+    <div class="flex flex-col lg:grid grid-cols-4 md:gap-16">
+      <div class="order-2 md:order-1 animationinviewfade">
         <h3 class="text-base md:text-2xl font-bold pb-3">Immune system</h3>
-        <p class="pb-8 md:pb-custom104 text-xs md:text-base">Beta-glucans and nucleotides help to enhance and regulate your puppy’s immune system - and offer extra protection by improving their response to vaccinations too.</p>
+        <p class="pb-8 lg:pb-custom104 text-xs md:text-base lg:max-w-64">Beta-glucans and nucleotides help to enhance and regulate your puppy’s immune system - and offer extra protection by improving their response to vaccinations too.</p>
         <h3 class="text-base md:text-2xl font-bold pb-3">Mental development</h3>
-        <p class="pb-8 md:pb-0 text-xs md:text-base">Not many puppy foods include DHA omega-3. But ours does. This fatty acid is proven to aid learning and socialisation, and reduce the risk of behavioural problems.</p>
+        <p class="pb-8 md:pb-0 text-xs md:text-base lg:max-w-64">Not many puppy foods include DHA omega-3. But ours does. This fatty acid is proven to aid learning and socialisation, and reduce the risk of behavioural problems.</p>
       </div>
-      <div class="order-1 md:order-2">
-        <Image class="pb-8 md:pb-0" src={foodbowl} alt="Foodbowl" />
+      <div class="order-1 md:order-2 col-span-2 flex justify-center items-center">
+        <div class="relative group pb-4 md:pb-0">
+          <!-- Picture of food bowl -->
+          <Image src={circlebowl} alt="First Image" class="w-[350px] md:w-[500px]" />
+          <!-- Picture that goes on top of food bowl on hover  -->
+          <Image src={circlecontent} alt="Second Image" class="absolute inset-0 object-cover opacity-0 transition-all duration-700 ease-in-out group-hover:opacity-100 w-[350px] md:w-[500px]" />
+        </div>
       </div>
-      <div class="order-3">
+
+      <div class="order-3 animationinviewfade">
         <h3 class="text-base md:text-2xl font-bold pb-3">Digestive system</h3>
-        <p class="pb-8 md:pb-custom104 text-xs md:text-base">We use chicken to aid your pup’s delicate digestion. And we also include prebiotics like FOS and MOS to help promote good bacteria - this is very important for your puppies.</p>
+        <p class="pb-8 lg:pb-custom104 text-xs md:text-base lg:max-w-64">We use chicken to aid your pup’s delicate digestion. And we also include prebiotics like FOS and MOS to help promote good bacteria - this is very important for your puppies.</p>
         <h3 class="text-base md:text-2xl font-bold pb-3">Energy for growth</h3>
-        <p class="text-xs md:text-base">Our energy-dense puppy kibble carefully balances calcium, vitamins, and minerals to help build strong bones and support your puppy’s rapid growth and development.</p>
+        <p class="text-xs md:text-base lg:max-w-64">Our energy-dense puppy kibble carefully balances calcium, vitamins, and minerals to help build strong bones and support your puppy’s rapid growth and development.</p>
       </div>
     </div>
   </section>
 
-  <Quote />
+  <Quote2>14,000 HAPPY PUPPIES & <span class="text-SalmonTreat-500">1.7 MILLION</span> MEALS FED BY US EVERY MONTH</Quote2>
 
   <Howitworks />
 
@@ -76,7 +83,7 @@ import Otheroptions from "../components/Otheroptions.astro";
     </div>
   </section> -->
 
-  <section class="mx-5 md:mx-custom104 mb-16 md:mb-44" id="supportpuppy">
+  <section class="mx-5 md:mx-custom104 mb-16 md:mb-44 animationinviewfade" id="supportpuppy">
     <div class="md:grid grid-cols-2 gap-custom90">
       <div class="">
         <h2 class="text-2xl text-center md:text-left md:text-custom54 font-paytone uppercase md:max-w-3xl pb-4 md:pb-8">SUPPORTING YOUR PUPPY AS THEY GROW</h2>
@@ -102,23 +109,37 @@ import Otheroptions from "../components/Otheroptions.astro";
 </MainLayout>
 
 <script>
-  import { animate, stagger, inView, scroll } from "motion";
+  import { animate, stagger, inView } from "motion";
 
   animate("body", { opacity: [0, 1] }, { duration: 1.5 });
 
-  // Stagger
-  inView("#supportpuppy", () => {
+  // Stagger animation + return
+  inView(".stagger-item", ({ target }) => {
     animate(
-      ".stagger-item",
+      target,
       {
         opacity: [0, 1],
         transform: ["translateY(20px)", "translateY(0)"],
       },
       {
         delay: stagger(0.3, { start: 0.7 }), // Animerer hvert element med 0.3s forsinkelse
-        duration: 0.7, // Hver animation varer 0.8 sekunder
+        duration: 0.5, // Hver animation varer 0.5 sekunder
         easing: "ease-out", // Glidende afslutning
       }
     );
+    return () => {
+      animate(target, {
+        opacity: [0, 1],
+        transform: ["translateY(20px)", "translateY(0)"],
+      });
+    };
+  });
+
+  // Inview animation fade in + return
+  inView(".animationinviewfade", ({ target }) => {
+    animate(target, { opacity: [0, 1] }, { duration: 2 });
+    return () => {
+      animate(target, { opacity: [0, 1] });
+    };
   });
 </script>

@@ -2,7 +2,7 @@
 const { cardname = "", dogbreed = "", dogreview = "", cardimage = "", dogimagealt = "" } = Astro.props;
 ---
 
-<article id="card" class="bg-GoldenRetriever-100 rounded-custom50px mb-5 md:mb-0 shadow-dropshadow">
+<article id="card" class="bg-GoldenRetriever-100 rounded-custom50px mb-5 md:mb-0 shadow-dropshadow animationinviewfade">
   <img src={cardimage} alt={dogimagealt} class="rounded-t-custom50px" />
   <div class="px-8 pb-8">
     <div id="stars" class="flex py-6">
@@ -27,3 +27,15 @@ const { cardname = "", dogbreed = "", dogreview = "", cardimage = "", dogimageal
     <p class="text-sm md:text-base">{dogreview}</p>
   </div>
 </article>
+
+<script>
+  import { animate, inView } from "motion";
+
+  // Inview animation fade in + return
+  inView(".animationinviewfade", ({ target }) => {
+    animate(target, { opacity: [0, 1] }, { duration: 2 });
+    return () => {
+      animate(target, { opacity: [0, 1] });
+    };
+  });
+</script>

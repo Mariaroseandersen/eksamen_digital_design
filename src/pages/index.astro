@@ -30,19 +30,18 @@ import some10 from "../assets/images/some10.webp";
 <MainLayout title="Tails.com">
   <section id="hero" class="mx-5 md:mx-custom104 lg:grid grid-cols-3">
     <div class="lg:col-span-2">
-      <h1 class="text-5xl md:text-8xl font-paytone uppercase md:max-w-3xl pb-8 md:pb-16 pt-4 md:pt-16">Real <span class="text-SalmonTreat-500">Food</span> for Real Friends</h1>
-     <p class="text-sm md:text-xl pb-8 md:pb-16 md:max-w-2xl">
-  We craft <strong>unique recipes</strong> tailored to your dog’s needs. Backed by science and delivered to your door each month through our easy subscription, your dog gets the <strong>perfect meals</strong>, right on time.
-  <div class="flex justify-center md:justify-start gap-6 md:gap-12 pb-4 md:pb-16">
-    <a href="/form">
-      <Button variant="primary" size="large">Try It Now</Button>
-    </a>
-    <a href="/pricing">
-      <Button variant="secondary" size="large">Learn more</Button>
-    </a>
-  </div>
-</p>
-
+      <h1 class="text-5xl md:text-8xl font-paytone uppercase md:max-w-3xl pb-8 md:pb-16 pt-4 md:pt-16 animationinviewfade">Real <span class="text-SalmonTreat-500">Food</span> for Real Friends</h1>
+      <p class="text-sm md:text-xl pb-8 md:pb-16 md:max-w-2xl animationinviewfade">
+        We craft <strong>unique recipes</strong> tailored to your dog’s needs. Backed by science and delivered to your door each month through our easy subscription, your dog gets the <strong>perfect meals</strong>, right on time.
+        <div class="flex justify-center md:justify-start gap-6 md:gap-12 pb-4 md:pb-16">
+          <a href="/form" class="animationinviewfade">
+            <Button variant="primary" size="large">Try It Now</Button>
+          </a>
+          <a href="/pricing" class="animationinviewfade">
+            <Button variant="secondary" size="large">Learn more</Button>
+          </a>
+        </div>
+      </p>
     </div>
 
     <div id="herodogs" class="mt-8 md:mt-0 flex items-end justify-center">
@@ -54,15 +53,15 @@ import some10 from "../assets/images/some10.webp";
 
   <section class="mx-5 md:mx-custom104 mb-16 md:mb-44 grid grid-cols-1 md:grid-cols-2 gap-custom90" id="whytails">
     <div>
-      <h2 class="text-2xl md:text-custom54 font-paytone md:max-w-3xl pb-6 md:pb-8 uppercase">Why Should You Pick Tails.com?</h2>
+      <h2 class="text-2xl md:text-custom54 font-paytone md:max-w-3xl pb-6 md:pb-8 uppercase animationinviewfade">Why Should You Pick Tails.com?</h2>
       <div class="block md:hidden mb-6">
         <Image src={whytails} alt="tails" />
       </div>
-      <p class="pb-4 md:pb-6 text-xs md:text-base">Better digestion, shinier coats, stronger joints and more – it’s all in the bag with a recipe designed just for your dog.</p>
-      <p class="pb-4 md:pb-6 text-xs md:text-base">Packed with tasty, high-quality ingredients, every bite is perfectly balanced with the good stuff they need, from protein and vitamins to tail-waggingly good flavor.</p>
-      <p class="pb-4 md:pb-6 text-xs md:text-base">And the best part? We deliver it right to your door every month. Treats? Covered. Advice? Our friendly care team is always here to help.</p>
-      <p class="pb-6 md:pb-12 text-xs md:text-base">Kibble is king! Crunchy, satisfying, and great for their teeth – no added sugar or artificial nasties. A little goes a long way to keep them happy and healthy.</p>
-      <Button variant="primary" size="small">Get Meal Plan</Button>
+      <p class="pb-4 md:pb-6 text-xs md:text-base animationinviewfade">Better digestion, shinier coats, stronger joints and more – it’s all in the bag with a recipe designed just for your dog.</p>
+      <p class="pb-4 md:pb-6 text-xs md:text-base animationinviewfade">Packed with tasty, high-quality ingredients, every bite is perfectly balanced with the good stuff they need, from protein and vitamins to tail-waggingly good flavor.</p>
+      <p class="pb-4 md:pb-6 text-xs md:text-base animationinviewfade">And the best part? We deliver it right to your door every month. Treats? Covered. Advice? Our friendly care team is always here to help.</p>
+      <p class="pb-6 md:pb-12 text-xs md:text-base animationinviewfade">Kibble is king! Crunchy, satisfying, and great for their teeth – no added sugar or artificial nasties. A little goes a long way to keep them happy and healthy.</p>
+      <div class="animationinviewfade"><Button variant="primary" size="small">Get Meal Plan</Button></div>
     </div>
     <div class="hidden md:block">
       <Image src={whytails} alt="tails" />
@@ -75,15 +74,15 @@ import some10 from "../assets/images/some10.webp";
 
   <Ourteam />
 
-  <Quote />
+  <Quote>We deliver more than 8 million delicious meals every month</Quote>
 
   <section class="mx-5 md:mx-custom104 mb-16 md:mb-44" id="some">
-    <h1 class="text-2xl md:text-custom54 font-paytone uppercase md:max-w-3xl pb-6 md:pb-16">
+    <h2 class="text-2xl md:text-custom54 font-paytone uppercase md:max-w-3xl pb-6 md:pb-16 animationinviewfade">
       FOLLOW
       <a href="https://www.instagram.com/tails.com_uk/" target="_blank" rel="noopener noreferrer" class=""> @TAILS.COM_UK </a>
       ON INSTAGRAM TO SEE MORE
-    </h1>
-    <div class="grid grid-cols-2 sm:grid-cols-2 md:grid-cols-5 gap-3 md:gap-6">
+    </h2>
+    <div class="grid grid-cols-2 sm:grid-cols-2 md:grid-cols-5 gap-3 md:gap-6 animationinviewfade">
       <a href="https://www.instagram.com/tails.com_uk/" target="_blank" rel="noopener noreferrer" class="block">
         <Image class="rounded-custom50px h-48 md:h-60 w-full object-cover transform transition-all duration-300 hover:scale-105 hover:translate-y-2" src={some1} alt="SoMe billede" />
       </a>
@@ -121,7 +120,7 @@ import some10 from "../assets/images/some10.webp";
 </MainLayout>
 
 <script>
-  import { animate, stagger, inView, scroll } from "motion";
+  import { animate, inView } from "motion";
 
   animate("body", { opacity: [0, 1] }, { duration: 1.5 });
 
@@ -146,4 +145,12 @@ import some10 from "../assets/images/some10.webp";
   }
 
   setInterval(fadeImage, 3000);
+
+  // Inview animation fade in + return
+  inView(".animationinviewfade", ({ target }) => {
+    animate(target, { opacity: [0, 1] }, { duration: 2 });
+    return () => {
+      animate(target, { opacity: [0, 1] });
+    };
+  });
 </script>

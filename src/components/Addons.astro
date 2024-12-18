@@ -1,11 +1,10 @@
 ---
-import Button from "../components/Button.astro";
 import Productcard from "../components/Productcard.astro";
 ---
 
-<section id="addons" class="mx-5 md:mx-custom104 mb-44">
-  <h2 class="text-2xl md:text-custom54 font-paytone md:max-w-3xl pb-6 md:pb-8 uppercase">Our Add-Ons</h2>
-  <p class="text-sm md:text-xl pb-8 md:pb-16 md:max-w-2xl">Has your dog been a good boy? Treat them with some of our add-ons, from Dental Dailies to delicious Good Dog Treats and Hand-Baked Biscuits.</p>
+<section id="addons" class="mx-5 md:mx-custom104 mb-16 md:mb-44">
+  <h2 class="text-2xl md:text-custom54 font-paytone md:max-w-3xl pb-6 md:pb-8 uppercase animationinviewfade">Our Add-Ons</h2>
+  <p class="text-sm md:text-xl pb-8 md:pb-16 md:max-w-2xl animationinviewfade">Has your dog been a good boy? Treat them with some of our add-ons, from Dental Dailies to delicious Good Dog Treats and Hand-Baked Biscuits.</p>
 
   <article class="sm:grid sm:grid-cols-2 md:grid-cols-3 gap-12">
     <Productcard cardimage="/dental.webp" productname="Dental Dailies" class="" />
@@ -13,3 +12,15 @@ import Productcard from "../components/Productcard.astro";
     <Productcard cardimage="/handbaked.webp" productname="Hand-Baked Biscuits" />
   </article>
 </section>
+
+<script>
+  import { animate, inView } from "motion";
+
+  // Inview animation fade in + return
+  inView(".animationinviewfade", ({ target }) => {
+    animate(target, { opacity: [0, 1] }, { duration: 2 });
+    return () => {
+      animate(target, { opacity: [0, 1] });
+    };
+  });
+</script>

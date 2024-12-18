@@ -20,9 +20,9 @@ import Subscription from "../components/Subscription.astro";
   <section class="bg-SalmonTreat-200 md:pl-custom104 mb-16 md:mb-20" id="pricinghero">
     <div class="md:grid grid-cols-2">
       <div class="py-10 md:py-32 mx-5">
-        <h2 class="text-5xl md:text-custom54 pb-8 md:pb-16 font-paytone uppercase">AFFORDABLE CARE, TAILORED TO YOUR DOG</h2>
-        <p class="text-sm md:text-xl pb-8 md:pb-16">Every dog is unique, and so is the cost of their perfect meal plan.</p>
-        <a href="/form">
+        <h2 class="text-5xl md:text-custom54 pb-8 md:pb-16 font-paytone uppercase animationinviewfade">AFFORDABLE CARE, TAILORED TO YOUR DOG</h2>
+        <p class="text-sm md:text-xl pb-8 md:pb-16 animationinviewfade">Every dog is unique, and so is the cost of their perfect meal plan.</p>
+        <a href="/form" class="animationinviewfade">
           <Button variant="subprimary" size="large">Start Trial</Button>
         </a>
       </div>
@@ -35,9 +35,9 @@ import Subscription from "../components/Subscription.astro";
   <Howitworks />
 
   <section class="mx-5 md:mx-custom104 mb-16 md:mb-44" id="pricesize">
-    <h2 class="text-2xl md:text-custom54 font-paytone md:max-w-3xl pb-6 md:pb-8 uppercase">Made fresh for your dog at a price you'll love</h2>
-    <p class="pb-6 text-xs md:text-base md:max-w-2xl">Every month, we create fresh, personalized meals just for your dog – no mass production, no compromises. See how affordable it is to give your furry friend the nutrition they deserve.</p>
-    <p class="md:pb-8 text-xs md:text-base md:max-w-2xl">All prices are per month on average, based on your dog’s approximate weight. If you have any questions, you’re always welcome to contact us.</p>
+    <h2 class="text-2xl md:text-custom54 font-paytone md:max-w-3xl pb-6 md:pb-8 uppercase animationinviewfade">Made fresh for your dog at a price you'll love</h2>
+    <p class="pb-6 text-xs md:text-base md:max-w-2xl animationinviewfade">Every month, we create fresh, personalized meals just for your dog – no mass production, no compromises. See how affordable it is to give your furry friend the nutrition they deserve.</p>
+    <p class="md:pb-8 text-xs md:text-base md:max-w-2xl animationinviewfade">All prices are per month on average, based on your dog’s approximate weight. If you have any questions, you’re always welcome to contact us.</p>
     <div class="sm:grid sm:grid-cols-2 md:grid-cols-5 gap-10 stagger-container">
       <article class="flex flex-col items-center justify-center text-center stagger-item">
         <Image src={toy1} alt="dog illustration" class="pb-8 w-40 h-auto -mt-16 md:-mt-0" />
@@ -97,13 +97,13 @@ import Subscription from "../components/Subscription.astro";
 </MainLayout>
 
 <script>
-  import { animate, stagger, inView, scroll } from "motion";
+  import { animate, stagger, inView } from "motion";
 
-  // Initial body fade-in animation
-  animate("body", { opacity: [0, 1] }, { duration: 2 }); // Øget duration for langsommere fade-in
+  animate("body", { opacity: [0, 1] }, { duration: 1.5 });
 
   // Stagger animation for .stagger-container (the entire article)
-  inView(".stagger-container", () => {
+  inView(".stagger-container", ({ target }) => {
+    // Initial animation when the container comes into view
     animate(
       ".stagger-item",
       {
@@ -111,10 +111,34 @@ import Subscription from "../components/Subscription.astro";
         transform: ["translateY(20px)", "translateY(0)"],
       },
       {
-        delay: stagger(0.6, { start: 0.3 }), // Øget forsinkelse mellem animationer
-        duration: 1.5, // Øget duration for langsommere animationer
-        easing: "ease-out", // Smooth easing
+        delay: stagger(0.5, { start: 0.3 }),
+        duration: 1,
+        easing: "ease-out",
       }
     );
+
+    // Return animation when the container leaves the viewport
+    return () => {
+      animate(
+        ".stagger-item",
+        {
+          opacity: [0, 1],
+          transform: ["translateY(0)", "translateY(20px)"],
+        },
+        {
+          delay: stagger(0.5, { start: 0.3 }),
+          duration: 1,
+          easing: "ease-out",
+        }
+      );
+    };
+  });
+
+  // Inview animation fade in + return
+  inView(".animationinviewfade", ({ target }) => {
+    animate(target, { opacity: [0, 1] }, { duration: 2 });
+    return () => {
+      animate(target, { opacity: [0, 1] });
+    };
   });
 </script>

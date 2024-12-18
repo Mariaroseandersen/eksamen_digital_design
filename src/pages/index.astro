@@ -44,7 +44,7 @@ import some10 from "../assets/images/some10.webp";
 
   <Kinetic />
 
-  <section class="mx-5 md:mx-custom104 mb-44 md:grid grid-cols-2 gap-custom90" id="whytails">
+  <!-- <section class="mx-5 md:mx-custom104 mb-44 md:grid grid-cols-2 gap-custom90" id="whytails">
     <div>
       <h2 class="text-2xl md:text-custom54 font-paytone md:max-w-3xl pb-6 md:pb-8 uppercase">Why Should You Pick Tails.com?</h2>
       <p class="pb-4 md:pb-6 text-xs md:text-base">Better digestion, shinier coats, stronger joints and more – it’s all in the bag with a recipe designed just for your dog.</p>
@@ -54,6 +54,23 @@ import some10 from "../assets/images/some10.webp";
       <Button variant="primary" size="small">Get Meal Plan</Button>
     </div>
     <div><Image src={whytails} alt="tails" /></div>
+  </section> -->
+
+  <section class="mx-5 md:mx-custom104 mb-44 grid grid-cols-1 md:grid-cols-2 gap-custom90" id="whytails">
+    <div>
+      <h2 class="text-2xl md:text-custom54 font-paytone md:max-w-3xl pb-6 md:pb-8 uppercase">Why Should You Pick Tails.com?</h2>
+      <div class="block md:hidden mb-6">
+        <Image src={whytails} alt="tails" />
+      </div>
+      <p class="pb-4 md:pb-6 text-xs md:text-base">Better digestion, shinier coats, stronger joints and more – it’s all in the bag with a recipe designed just for your dog.</p>
+      <p class="pb-4 md:pb-6 text-xs md:text-base">Packed with tasty, high-quality ingredients, every bite is perfectly balanced with the good stuff they need, from protein and vitamins to tail-waggingly good flavor.</p>
+      <p class="pb-4 md:pb-6 text-xs md:text-base">And the best part? We deliver it right to your door every month. Treats? Covered. Advice? Our friendly care team is always here to help.</p>
+      <p class="pb-6 md:pb-12 text-xs md:text-base">Kibble is king! Crunchy, satisfying, and great for their teeth – no added sugar or artificial nasties. A little goes a long way to keep them happy and healthy.</p>
+      <Button variant="primary" size="small">Get Meal Plan</Button>
+    </div>
+    <div class="hidden md:block">
+      <Image src={whytails} alt="tails" />
+    </div>
   </section>
 
   <Howitworks />

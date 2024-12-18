@@ -5,7 +5,11 @@ import Link from "../components/Link.astro";
 import { Image } from "astro:assets";
 import pricinghero from "../assets/images/pricinghero.webp";
 import step from "../assets/images/step.svg";
-import toy from "../assets/images/toy.svg";
+import toy1 from "../assets/images/toy1.svg";
+import small1 from "../assets/images/small1.svg";
+import medium1 from "../assets/images/medium1.svg";
+import large1 from "../assets/images/large1.svg";
+import giant1 from "../assets/images/giant1.svg";
 import Howitworks from "../components/Howitworks.astro";
 import Reviews from "../components/Reviews.astro";
 import Ourproducts from "../components/Ourproducts.astro";
@@ -33,30 +37,30 @@ import Subscription from "../components/Subscription.astro";
   <section class="mx-5 md:mx-custom104 mb-16 md:mb-44" id="pricesize">
     <h2 class="text-2xl md:text-custom54 font-paytone md:max-w-3xl pb-6 md:pb-8 uppercase">Made fresh for your dog at a price you'll love</h2>
     <p class="pb-6 text-xs md:text-base md:max-w-2xl">Every month, we create fresh, personalized meals just for your dog – no mass production, no compromises. See how affordable it is to give your furry friend the nutrition they deserve.</p>
-    <p class="pb-8 text-xs md:text-base md:max-w-2xl">All prices are per month on average, based on your dog’s approximate weight. If you have any questions, you’re always welcome to contact us.</p>
+    <p class="md:pb-8 text-xs md:text-base md:max-w-2xl">All prices are per month on average, based on your dog’s approximate weight. If you have any questions, you’re always welcome to contact us.</p>
     <div class="sm:grid sm:grid-cols-2 md:grid-cols-5 gap-10 stagger-container">
       <article class="flex flex-col items-center justify-center text-center stagger-item">
-        <Image src={toy} alt="dog illustration" class="pb-8 w-40 h-auto" />
+        <Image src={toy1} alt="dog illustration" class="pb-8 w-40 h-auto -mt-20 md:-mt-0" />
         <h3 class="text-sm md:text-xl font-bold pb-3">Toy (1-5kg)</h3>
         <p class="text-xs md:text-base">13,42 € per month <br />average</p>
       </article>
       <article class="flex flex-col items-center justify-center text-center stagger-item">
-        <Image src={step} alt="dog illustration" class="pb-8 w-40 h-auto" />
+        <Image src={small1} alt="dog illustration" class="pb-8 w-40 h-auto -mt-20 md:-mt-0" />
         <h3 class="text-sm md:text-xl font-bold pb-3">Small (5-10kg)</h3>
         <p class="text-xs md:text-base">17,94 € per month <br /> average</p>
       </article>
       <article class="flex flex-col items-center justify-center text-center stagger-item">
-        <Image src={step} alt="dog illustration" class="pb-8 w-40 h-auto" />
+        <Image src={medium1} alt="dog illustration" class="pb-8 w-40 h-auto -mt-10 md:-mt-0" />
         <h3 class="text-sm md:text-xl font-bold pb-3">Medium (25-45kg)</h3>
         <p class="text-xs md:text-base">26,33 € per month <br /> average</p>
       </article>
       <article class="flex flex-col items-center justify-center text-center stagger-item">
-        <Image src={step} alt="dog illustration" class="pb-8 w-40 h-auto" />
+        <Image src={large1} alt="dog illustration" class="pb-8 w-40 h-auto -mt-5 md:-mt-0" />
         <h3 class="text-sm md:text-xl font-bold pb-3">Large (over 45kg)</h3>
         <p class="text-xs md:text-base">35,91 € per month <br /> average</p>
       </article>
       <article class="flex flex-col items-center justify-center text-center stagger-item">
-        <Image src={step} alt="dog illustration" class="pb-8 w-40 h-auto" />
+        <Image src={giant1} alt="dog illustration" class="pb-8 w-40 h-auto -mt-5 md:-mt-0" />
         <h3 class="text-sm md:text-xl font-bold pb-3">Giant (kg)</h3>
         <p class="text-xs md:text-base">46,83 € per month <br />average</p>
       </article>

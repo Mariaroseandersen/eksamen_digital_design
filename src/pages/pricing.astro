@@ -62,19 +62,25 @@ import Subscription from "../components/Subscription.astro";
     </div>
   </section>
 
-  <section id="uniqueprice" class="bg-BarkingAtTheMoon-500 md:grid grid-cols-2 gap-44 py-8 px-5 md:p-custom104 mb-44">
+  <section id="uniqueprice" class="bg-BarkingAtTheMoon-500 py-8 px-5 md:p-custom104 mb-16 md:mb-44">
     <div class="flex items-center justify-center">
-      <h2 class="text-FluffyCloud-300 text-2xl text-center md:text-custom54 font-paytone uppercase">
+      <h2 class="text-FluffyCloud-300 text-2xl text-center md:text-custom54 font-paytone uppercase pb-8 md:pb-16">
         Your price is <span class="text-SalmonTreat-500">unique</span> and based on
       </h2>
     </div>
-    <div class="stagger-container text-FluffyCloud-300 text-center">
-      <h3 class="stagger-item text-base md:text-2xl pb-3 font-bold">Ingredients</h3>
-      <p class="stagger-item text-base pb-12">Some cost more than others</p>
-      <h3 class="stagger-item text-base md:text-2xl pb-3 font-bold">Volume</h3>
-      <p class="stagger-item text-base pb-12">Larger dogs need more food</p>
-      <h3 class="stagger-item text-base md:text-2xl pb-3 font-bold">Supplements</h3>
-      <p class="stagger-item text-base pb-12">For dogs that need extra support</p>
+    <div class="stagger-container text-FluffyCloud-300 text-center md:grid grid-cols-3">
+      <div>
+        <h3 class="stagger-item text-base md:text-2xl pb-0 md:pb-3 font-bold">Ingredients</h3>
+        <p class="stagger-item text-base pb-8 md:pb-0">Some cost more than others</p>
+      </div>
+      <div>
+        <h3 class="stagger-item text-base md:text-2xl pb-0 md:pb-3 font-bold">Volume</h3>
+        <p class="stagger-item text-base pb-8 md:pb-0">Larger dogs need more food</p>
+      </div>
+      <div>
+        <h3 class="stagger-item text-base md:text-2xl pb-0 md:pb-3 font-bold">Supplements</h3>
+        <p class="stagger-item text-base pb-8 md:pb-0">For dogs that need extra support</p>
+      </div>
     </div>
   </section>
 

@@ -68,48 +68,47 @@ import Subscription from "../components/Subscription.astro";
         Your price is <span class="text-SalmonTreat-500">unique</span> and based on
       </h2>
     </div>
-    <div class="stagger-container text-FluffyCloud-300 text-center md:grid grid-cols-3">
-      <div>
-        <h3 class="stagger-item text-base md:text-2xl pb-0 md:pb-3 font-bold">Ingredients</h3>
-        <p class="stagger-item text-base pb-8 md:pb-0">Some cost more than others</p>
-      </div>
-      <div>
-        <h3 class="stagger-item text-base md:text-2xl pb-0 md:pb-3 font-bold">Volume</h3>
-        <p class="stagger-item text-base pb-8 md:pb-0">Larger dogs need more food</p>
-      </div>
-      <div>
-        <h3 class="stagger-item text-base md:text-2xl pb-0 md:pb-3 font-bold">Supplements</h3>
-        <p class="stagger-item text-base pb-8 md:pb-0">For dogs that need extra support</p>
-      </div>
-
-      <Reviews />
-
-      <Ourproducts />
-
-      <Subscription />
+    < class="stagger-container text-FluffyCloud-300 text-center md:grid grid-cols-3">
+    <div>
+      <h3 class="stagger-item text-base md:text-2xl pb-0 md:pb-3 font-bold">Ingredients</h3>
+      <p class="stagger-item text-base pb-8 md:pb-0">Some cost more than others</p>
     </div>
+    <div>
+      <h3 class="stagger-item text-base md:text-2xl pb-0 md:pb-3 font-bold">Volume</h3>
+      <p class="stagger-item text-base pb-8 md:pb-0">Larger dogs need more food</p>
+    </div>
+    <div>
+      <h3 class="stagger-item text-base md:text-2xl pb-0 md:pb-3 font-bold">Supplements</h3>
+      <p class="stagger-item text-base pb-8 md:pb-0">For dogs that need extra support</p>
+    </div>
+  </section>
 
-    <script>
-      import { animate, stagger, inView, scroll } from "motion";
+  <Reviews />
 
-      // Initial body fade-in animation
-      animate("body", { opacity: [0, 1] }, { duration: 2 }); // Øget duration for langsommere fade-in
+  <Ourproducts />
 
-      // Stagger animation for .stagger-container (the entire article)
-      inView(".stagger-container", () => {
-        animate(
-          ".stagger-item",
-          {
-            opacity: [0, 1],
-            transform: ["translateY(20px)", "translateY(0)"],
-          },
-          {
-            delay: stagger(0.6, { start: 0.3 }), // Øget forsinkelse mellem animationer
-            duration: 1.5, // Øget duration for langsommere animationer
-            easing: "ease-out", // Smooth easing
-          }
-        );
-      });
-    </script>
-  </section></MainLayout
->
+  <Subscription />
+</MainLayout>
+
+<script>
+  import { animate, stagger, inView, scroll } from "motion";
+
+  // Initial body fade-in animation
+  animate("body", { opacity: [0, 1] }, { duration: 2 }); // Øget duration for langsommere fade-in
+
+  // Stagger animation for .stagger-container (the entire article)
+  inView(".stagger-container", () => {
+    animate(
+      ".stagger-item",
+      {
+        opacity: [0, 1],
+        transform: ["translateY(20px)", "translateY(0)"],
+      },
+      {
+        delay: stagger(0.6, { start: 0.3 }), // Øget forsinkelse mellem animationer
+        duration: 1.5, // Øget duration for langsommere animationer
+        easing: "ease-out", // Smooth easing
+      }
+    );
+  });
+</script>

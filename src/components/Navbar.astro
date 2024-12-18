@@ -5,7 +5,7 @@ import logo from "../assets/images/logo.webp";
 
 <div x-data="{ showmenu: false }" class="w-full bg-GoldenRetriever-500">
   <!-- Navbar Container -->
-  <div class="flex items-center justify-between px-custom104 py-6">
+  <div class="flex items-center justify-between px-6 md:px-16 py-6">
     <!-- Logo (Venstre) -->
     <div id="logo">
       <a href="/" class="flex items-center">
@@ -39,7 +39,7 @@ import logo from "../assets/images/logo.webp";
     </button>
   </div>
 
-  <!-- Mobilmenu (Skjult som standard) -->
+  <!-- Mobilmenu -->
   <nav id="mobilmenu" class="lg:hidden bg-GoldenRetriever-500" x-show="showmenu" x-transition>
     <ul class="flex flex-col items-center gap-6 py-4 text-BarkingAtTheMoon-600 font-poppins">
       <li><a href="/pricing" class="hover:text-BarkingAtTheMoon-400">Pricing</a></li>

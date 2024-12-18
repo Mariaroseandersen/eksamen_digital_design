@@ -1,0 +1,25 @@
+---
+
+---
+
+<section class="bg-BarkingAtTheMoon-500 text-FluffyCloud-300 py-8 px-5 md:p-custom104 mb-16 md:mb-44">
+  <h1 class="text-2xl text-center md:text-custom54 md:text-left font-paytone uppercase animationinviewleft"><slot /></h1>
+</section>
+
+<script>
+  import { animate, inView } from "motion";
+
+  // Inview animation from left + return
+  inView(".animationinviewleft", ({target}) => {
+    animate(
+        target,
+        { x: [-100, 0], opacity: [0, 1] }, { duration: 1.5, easing: "ease-out" },
+  )
+    return () => {
+      animate(
+      target,
+      { x: [-100, 0], opacity: [0, 1]}
+    )  
+    }
+  });
+</script>

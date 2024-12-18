@@ -11,9 +11,9 @@ import Button from "../components/Button.astro";
 ---
 
 <section class="mx-5 md:mx-custom104">
-  <h2 class="text-2xl md:text-custom54 font-paytone md:max-w-3xl pb-6 md:pb-8 uppercase">How it works</h2>
-  <p class="text-sm md:text-xl pb-8 md:pb-16 md:max-w-2xl">Three easy steps to ensure a lifelong healthy food plan for your best friend. We adapt their recipe as they grow.</p>
-  <div class="sm:grid sm:grid-cols-2 md:grid-cols-3 sm:gap-16 md:gap-32 pb-8 md:pb-16">
+  <h2 class="text-2xl md:text-custom54 font-paytone md:max-w-3xl pb-6 md:pb-8 uppercase animationinviewfade">How it works</h2>
+  <p class="text-sm md:text-xl pb-8 md:pb-16 md:max-w-2xl animationinviewfade">Three easy steps to ensure a lifelong healthy food plan for your best friend. We adapt their recipe as they grow.</p>
+  <div class="sm:grid sm:grid-cols-2 md:grid-cols-3 sm:gap-16 md:gap-32 pb-8 md:pb-16 animationinviewfade">
     <article class="flex flex-col items-center justify-center text-center">
       <Image src={step1} alt="dog illustration" class="pb-3 md:pb-4 w-40 h-auto" />
       <Image src={number1} alt="step 1" class="pb-5 md:pb-8 w-20 h-auto" />
@@ -39,10 +39,24 @@ import Button from "../components/Button.astro";
     <article>
       <Image src={treats} alt="image of dog treats" class="w-48 m-auto pb-4" />
     </article>
-    <article class="flex flex-col justify-center text-center md:text-start">
+    <article class="flex flex-col justify-center text-center md:text-start animationinviewfade">
       <h3 class="text-sm md:text-xl font-bold pb-3 md:pb-4">Has your dog been a good pup?</h3>
       <p class="text-xs md:text-base pb-6 md:pb-12">Add in yummy wet food and healthy treats. We’ll adjust your dog’s feeding plan to suit.</p>
-      <Button variant="subprimary" size="small">See Our Add-ons</Button>
+      <div>
+        <Button variant="subprimary" size="small">See Our Add-ons</Button>
+      </div>
     </article>
   </div>
 </section>
+
+<script>
+  import { animate, inView } from "motion";
+
+  // Inview animation fade in + return
+  inView(".animationinviewfade", ({ target }) => {
+    animate(target, { opacity: [0, 1] }, { duration: 2 });
+    return () => {
+      animate(target, { opacity: [0, 1] });
+    };
+  });
+</script>

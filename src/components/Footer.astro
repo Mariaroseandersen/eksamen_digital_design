@@ -3,8 +3,8 @@ import { Image } from "astro:assets";
 import footerdog from "../assets/images/footerdog.webp";
 import Button from "../components/Button.astro";
 import mentions from "../assets/images/mentions.png";
+import tooth from "../assets/images/tooth.svg";
 ---
-
 
 <article class="md:grid grid-cols-2 gap-8 mx-5 md:mx-custom104 pt-20">
   <div>
@@ -16,7 +16,7 @@ import mentions from "../assets/images/mentions.png";
     <p class="text-xl md:text-2xl pb-5">We care about you and your dog and we believe that <strong>a healthy pup</strong> = <strong>a happy life</strong></p>
     <p class="pb-4">Learn more about how our products can support your doggo’s health:</p>
     <ul class="font-bold">
-      <li class="pb-3">Dental hygiene</li>
+      <li class="pb-3 flex"><Image src={tooth} alt="tooth" class="w-[50px]" /><p>Dental hygiene</p></li>
       <li class="pb-3">Weight management</li>
       <li class="pb-3">Grain free</li>
       <li class="pb-3">Sensitive skin</li>
@@ -51,4 +51,3 @@ import mentions from "../assets/images/mentions.png";
     <Image src={mentions} alt="logos from newspapers" class="w-[500px] h-auto" />
   </div>
 </article>
-

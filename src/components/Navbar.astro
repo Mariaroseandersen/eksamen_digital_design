@@ -97,14 +97,14 @@ import logo from "../assets/images/logo.webp";
 </div>
 
 <script>
-  document.addEventListener("DOMContentLoaded", function () {
-    const currentPath = window.location.pathname;
-    const menuItems = document.querySelectorAll("#desktopmenu a, #mobilmenu a");
+ document.addEventListener("DOMContentLoaded", function () {
+  const currentPath = window.location.pathname;
+  const menuItems = document.querySelectorAll("#desktopmenu > ul > li > a"); // Kun links i den øvre menu
 
-    menuItems.forEach((item) => {
-      if (item.getAttribute("href") === currentPath) {
-        item.classList.add("border-BarkingAtTheMoon-500");
-      }
-    });
+  menuItems.forEach((item) => {
+    if (item.getAttribute("href") === currentPath) {
+      item.classList.add("border-b-2", "border-BarkingAtTheMoon-500");
+    }
   });
+});
 </script>

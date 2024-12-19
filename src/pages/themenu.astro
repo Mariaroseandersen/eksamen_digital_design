@@ -31,12 +31,16 @@ import Subscription from "../components/Subscription.astro";
   <section class="mx-5 md:mx-custom104 mb-16 md:mb-44 md:grid grid-cols-2 gap-custom90" id="betteringredients">
     <div>
       <h2 class="text-2xl md:text-custom54 font-paytone md:max-w-3xl pb-4 md:pb-8 uppercase animationinviewfade">Better ingredients mean tastier food</h2>
-      <p class="pb-4 text-xs md:text-base animationinviewfade">At tails.com, we carefully craft every recipe with ingredients that matter. From premium meats and fish packed with <strong>protein</strong> and essential fatty acids to <strong>wholesome vegetables</strong> and grains that provide energy and fiber, every element supports your dog’s health and well-being.</p>
-      <p class="pb-4 text-xs md:text-base animationinviewfade">We also include vitamins, minerals, and prebiotics to <strong>boost immunity</strong>, aid digestion, and support healthy joints. The result is a balanced, delicious meal tailored to your dog’s <strong>specific needs</strong>, ensuring they stay happy, healthy, and full of energy every day.</p>
-      <p class="pb-4 text-xs md:text-base animationinviewfade">All our ingredients are sourced in the UK and the EU.</p>
+      <div class="w-[350px] lg:w-[500px] h-auto block md:hidden pb-6 m-auto">
+        <Image src={betteringredients} alt="tails" />
+      </div>
+      <p class="pb-4 text-xs md:text-base animationinviewfade sm:max-w-xl">At tails.com, we carefully craft every recipe with ingredients that matter. From premium meats and fish packed with <strong>protein</strong> and essential fatty acids to <strong>wholesome vegetables</strong> and grains that provide energy and fiber, every element supports your dog’s health and well-being.</p>
+      <p class="pb-4 text-xs md:text-base animationinviewfade sm:max-w-xl">We also include vitamins, minerals, and prebiotics to <strong>boost immunity</strong>, aid digestion, and support healthy joints. The result is a balanced, delicious meal tailored to your dog’s <strong>specific needs</strong>, ensuring they stay happy, healthy, and full of energy every day.</p>
+      <p class="pb-4 text-xs md:text-base animationinviewfade sm:max-w-xl">All our ingredients are sourced in the UK and the EU.</p>
     </div>
-
-    <Image src={betteringredients} alt="tails" class="md:w-[502px] md:h-[477px]" />
+    <div class="w-[350px] lg:w-[500px] h-auto h-auto hidden md:block">
+      <Image src={betteringredients} alt="tails" />
+    </div>
   </section>
 
   <Ourproducts />

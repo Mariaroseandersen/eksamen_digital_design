@@ -16,50 +16,29 @@ import logo from "../assets/images/logo.webp";
       <ul class="flex gap-custom90 text-base font-poppins text-BarkingAtTheMoon-500">
         <li><a href="/pricing" class="hover:text-BarkingAtTheMoon-400 transition duration-300">Pricing</a></li>
         <li class="relative group" x-data="{ showDropdown: false }">
-          <a 
-            href="/themenu" 
-            @mouseenter="showDropdown = true" 
-            @mouseleave="showDropdown = false"
-            class="hover:text-BarkingAtTheMoon-400 transition duration-300 flex items-center">
+          <a href="/themenu" @mouseenter="showDropdown = true" @mouseleave="showDropdown = false" class="hover:text-BarkingAtTheMoon-400 transition duration-300 flex items-center">
             The Menu <span class="ml-1">&#9662;</span>
           </a>
-          
+
           <!-- Dropdown-menu med hjælp fra chatgbt -->
-          <ul 
-            x-show="showDropdown" 
-            @mouseenter="showDropdown = true" 
-            @mouseleave="showDropdown = false"
-            x-transition
-            class="absolute left-0 mt-0 w-64 bg-GoldenRetriever-500 border hidden group-hover:block">
+          <ul x-show="showDropdown" @mouseenter="showDropdown = true" @mouseleave="showDropdown = false" x-transition class="absolute left-0 mt-0 w-64 bg-GoldenRetriever-500 drop-shadow hidden group-hover:block">
             <li>
-              <a href="/singleview" class="block px-4 py-2 text-BarkingAtTheMoon-500 hover:bg-BarkingAtTheMoon-opacity50 pt-8 hover:text-BarkingAtTheMoon-500 font-poppins transition">
-                Tailor-made Dry Food
-              </a>
-            </li>
-             <li>
-              <a href="/singleview" class="block px-4 py-2 text-BarkingAtTheMoon-500 hover:bg-BarkingAtTheMoon-opacity50 hover:text-BarkingAtTheMoon-500 font-poppins transition">
-                Puppy Food
-              </a>
-            </li>
-             <li>
-              <a href="/singleview" class="block px-4 py-2 text-BarkingAtTheMoon-500 hover:bg-BarkingAtTheMoon-opacity50 hover:text-BarkingAtTheMoon-500 font-poppins transition">
-                Hypo-Allergenic
-              </a>
+              <a href="/singleview" class="block px-4 py-2 text-BarkingAtTheMoon-500 hover:bg-BarkingAtTheMoon-opacity50 pt- hover:text-BarkingAtTheMoon-500 font-poppins transition"> Tailor-made Dry Food </a>
             </li>
             <li>
-              <a href="/singleview" class="block px-4 py-2 text-BarkingAtTheMoon-500 hover:bg-BarkingAtTheMoon-opacity50 hover:text-BarkingAtTheMoon-500 font-poppins transition">
-                Sensitive Stomachs
-              </a>
+              <a href="/singleview" class="block px-4 py-2 text-BarkingAtTheMoon-500 hover:bg-BarkingAtTheMoon-opacity50 hover:text-BarkingAtTheMoon-500 font-poppins transition"> Puppy Food </a>
             </li>
             <li>
-              <a href="/singleview" class="block px-4 py-2 text-BarkingAtTheMoon-500 hover:bg-BarkingAtTheMoon-opacity50 hover:text-BarkingAtTheMoon-500 font-poppins transition">
-                Wet Food
-              </a>
+              <a href="/singleview" class="block px-4 py-2 text-BarkingAtTheMoon-500 hover:bg-BarkingAtTheMoon-opacity50 hover:text-BarkingAtTheMoon-500 font-poppins transition"> Hypo-Allergenic </a>
             </li>
             <li>
-              <a href="/singleview" class="block px-4 py-2 text-BarkingAtTheMoon-500 hover:bg-BarkingAtTheMoon-opacity50 hover:text-BarkingAtTheMoon-500 font-poppins transition">
-                Senior Dog Food
-              </a>
+              <a href="/singleview" class="block px-4 py-2 text-BarkingAtTheMoon-500 hover:bg-BarkingAtTheMoon-opacity50 hover:text-BarkingAtTheMoon-500 font-poppins transition"> Sensitive Stomachs </a>
+            </li>
+            <li>
+              <a href="/singleview" class="block px-4 py-2 text-BarkingAtTheMoon-500 hover:bg-BarkingAtTheMoon-opacity50 hover:text-BarkingAtTheMoon-500 font-poppins transition"> Wet Food </a>
+            </li>
+            <li>
+              <a href="/singleview" class="block px-4 py-2 text-BarkingAtTheMoon-500 hover:bg-BarkingAtTheMoon-opacity50 hover:text-BarkingAtTheMoon-500 font-poppins transition"> Senior Dog Food </a>
             </li>
           </ul>
         </li>
@@ -97,14 +76,14 @@ import logo from "../assets/images/logo.webp";
 </div>
 
 <script>
- document.addEventListener("DOMContentLoaded", function () {
-  const currentPath = window.location.pathname;
-  const menuItems = document.querySelectorAll("#desktopmenu > ul > li > a"); // Kun links i den øvre menu
+  document.addEventListener("DOMContentLoaded", function () {
+    const currentPath = window.location.pathname;
+    const menuItems = document.querySelectorAll("#desktopmenu > ul > li > a"); // Kun links i den øvre menu
 
-  menuItems.forEach((item) => {
-    if (item.getAttribute("href") === currentPath) {
-      item.classList.add("border-b-2", "border-BarkingAtTheMoon-500");
-    }
+    menuItems.forEach((item) => {
+      if (item.getAttribute("href") === currentPath) {
+        item.classList.add("border-b-2", "border-BarkingAtTheMoon-500");
+      }
+    });
   });
-});
 </script>

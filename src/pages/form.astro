@@ -44,7 +44,11 @@ import dogform from "../assets/images/dogform.webp";
         </span>
       </h3>
     </div>
-    <Button variant="primary" size="large">Continue</Button>
+    <div x-data>
+      <div x-on:click="alert('Thank you for your order!')">
+        <Button variant="primary" size="large">Continue</Button>
+      </div>
+    </div>
   </section>
 
   <section class="bg-BarkingAtTheMoon-500 mt-16 relative">
@@ -60,7 +64,7 @@ import dogform from "../assets/images/dogform.webp";
 </MainLayout>
 
 <script>
-  import { animate, stagger, inView, scroll } from "motion";
+  import { animate, inView } from "motion";
 
   animate("body", { opacity: [0, 1] }, { duration: 1.5 });
 
@@ -72,3 +76,5 @@ import dogform from "../assets/images/dogform.webp";
     };
   });
 </script>
+
+<script src="https://cdn.jsdelivr.net/npm/alpinejs@3.x.x/dist/alpine.min.js" defer></script>

@@ -69,22 +69,22 @@ import Subscription from "../components/Subscription.astro";
 
   <section id="uniqueprice" class="bg-BarkingAtTheMoon-500 py-8 px-5 md:p-custom104 mb-16 md:mb-44">
     <div class="flex items-center justify-center">
-      <h2 class="text-FluffyCloud-300 text-2xl text-center md:text-custom54 font-paytone uppercase pb-8 md:pb-16">
+      <h2 class="text-GoldenRetriever-100 text-2xl text-center md:text-custom54 font-paytone uppercase pb-8 md:pb-16">
         Your price is <span class="text-SalmonTreat-500">unique</span> and based on
       </h2>
     </div>
-    <div class="stagger-container text-FluffyCloud-300 text-center md:grid grid-cols-3">
+    <div class="stagger-container-2 text-GoldenRetriever-100 text-center md:grid grid-cols-3">
       <div>
-        <h3 class="stagger-item text-base md:text-2xl pb-0 md:pb-3 font-bold">Ingredients</h3>
-        <p class="stagger-item text-base pb-8 md:pb-0">Some cost more than others</p>
+        <h3 class="stagger-item-2 text-base md:text-2xl pb-0 md:pb-3 font-bold">Ingredients</h3>
+        <p class="stagger-item-2 text-base pb-8 md:pb-0">Some cost more than others</p>
       </div>
       <div>
-        <h3 class="stagger-item text-base md:text-2xl pb-0 md:pb-3 font-bold">Volume</h3>
-        <p class="stagger-item text-base pb-8 md:pb-0">Larger dogs need more food</p>
+        <h3 class="stagger-item-2 text-base md:text-2xl pb-0 md:pb-3 font-bold">Volume</h3>
+        <p class="stagger-item-2 text-base pb-8 md:pb-0">Larger dogs need more food</p>
       </div>
       <div>
-        <h3 class="stagger-item text-base md:text-2xl pb-0 md:pb-3 font-bold">Supplements</h3>
-        <p class="stagger-item text-base md:pb-0">For dogs that need extra support</p>
+        <h3 class="stagger-item-2 text-base md:text-2xl pb-0 md:pb-3 font-bold">Supplements</h3>
+        <p class="stagger-item-2 text-base md:pb-0">For dogs that need extra support</p>
       </div>
     </div>
   </section>
@@ -121,6 +121,39 @@ import Subscription from "../components/Subscription.astro";
     return () => {
       animate(
         ".stagger-item",
+        {
+          opacity: [0, 1],
+          transform: ["translateY(0)", "translateY(20px)"],
+        },
+        {
+          delay: stagger(0.5, { start: 0.3 }),
+          duration: 1,
+          easing: "ease-out",
+        }
+      );
+    };
+  });
+
+  // Stagger animation for .stagger-container (the entire article) 2
+  inView(".stagger-container-2", ({ target }) => {
+    // Initial animation when the container comes into view
+    animate(
+      ".stagger-item-2",
+      {
+        opacity: [0, 1],
+        transform: ["translateY(20px)", "translateY(0)"],
+      },
+      {
+        delay: stagger(0.5, { start: 0.3 }),
+        duration: 1,
+        easing: "ease-out",
+      }
+    );
+
+    // Return animation when the container leaves the viewport
+    return () => {
+      animate(
+        ".stagger-item-2",
         {
           opacity: [0, 1],
           transform: ["translateY(0)", "translateY(20px)"],

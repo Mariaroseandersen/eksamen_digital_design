@@ -15,7 +15,53 @@ import logo from "../assets/images/logo.webp";
     <nav id="desktopmenu" class="absolute left-1/2 transform -translate-x-1/2 hidden lg:block">
       <ul class="flex gap-custom90 text-base font-poppins text-BarkingAtTheMoon-500">
         <li><a href="/pricing" class="hover:text-BarkingAtTheMoon-400 transition duration-300">Pricing</a></li>
-        <li><a href="/themenu" class="hover:text-BarkingAtTheMoon-400 transition duration-300">The Menu</a></li>
+        <li class="relative group" x-data="{ showDropdown: false }">
+          <a 
+            href="/themenu" 
+            @mouseenter="showDropdown = true" 
+            @mouseleave="showDropdown = false"
+            class="hover:text-BarkingAtTheMoon-400 transition duration-300 flex items-center">
+            The Menu <span class="ml-1">&#9662;</span>
+          </a>
+          <!-- Dropdown-menu med hjælp fra chatgbt -->
+          <ul 
+            x-show="showDropdown" 
+            @mouseenter="showDropdown = true" 
+            @mouseleave="showDropdown = false"
+            x-transition
+            class="absolute left-0 mt-2 w-48 bg-GoldenRetriever-500 border hidden group-hover:block">
+            <li>
+              <a href="/themenu#pizza" class="block px-4 py-2 text-BarkingAtTheMoon-500 hover:bg-SalmonTreat-200 hover:text-BarkingAtTheMoon-400 font-poppins transition">
+                Tailor-made Dry Food
+              </a>
+            </li>
+             <li>
+              <a href="/themenu#pizza" class="block px-4 py-2 text-BarkingAtTheMoon-500 hover:bg-SalmonTreat-200 hover:text-BarkingAtTheMoon-400 font-poppins transition">
+                Puppy Food
+              </a>
+            </li>
+             <li>
+              <a href="/themenu#pizza" class="block px-4 py-2 text-BarkingAtTheMoon-500 hover:bg-SalmonTreat-200 hover:text-BarkingAtTheMoon-400 font-poppins transition">
+                Hypo-Allergenic
+              </a>
+            </li>
+            <li>
+              <a href="/themenu#pizza" class="block px-4 py-2 text-BarkingAtTheMoon-500 hover:bg-SalmonTreat-200 hover:text-BarkingAtTheMoon-400 font-poppins transition">
+                Sensitive Stomachs
+              </a>
+            </li>
+            <li>
+              <a href="/themenu#pasta" class="block px-4 py-2 text-BarkingAtTheMoon-500 hover:bg-SalmonTreat-200 hover:text-BarkingAtTheMoon-400 font-poppins transition">
+                Wet Food
+              </a>
+            </li>
+            <li>
+              <a href="/themenu#drinks" class="block px-4 py-2 text-BarkingAtTheMoon-500 hover:bg-SalmonTreat-200 hover:text-BarkingAtTheMoon-400 font-poppins transition">
+                Senior Dog Food
+              </a>
+            </li>
+          </ul>
+        </li>
         <li><a href="#" class="hover:text-BarkingAtTheMoon-400 transition duration-300">Our Story</a></li>
         <li><a href="/form" class="hover:text-BarkingAtTheMoon-400 transition duration-300">Get Started</a></li>
       </ul>
@@ -30,7 +76,7 @@ import logo from "../assets/images/logo.webp";
     </div>
 
     <!-- Burger Menu (Mobil) -->
-    <button id="burgermenu" class="lg:hidden" x-on:click="showmenu = ! showmenu">
+    <button id="burgermenu" class="lg:hidden" x-on:click="showmenu = !showmenu">
       <span :class="{ 'rotate-45 translate-y-2': showmenu }" class="block w-8 h-0.5 bg-BarkingAtTheMoon-500 mb-2 transition-all duration-300"></span>
       <span :class="{ 'opacity-0': showmenu }" class="block w-8 h-0.5 bg-BarkingAtTheMoon-500 mb-2 transition-all duration-300"></span>
       <span :class="{ '-rotate-45 -translate-y-2': showmenu }" class="block w-8 h-0.5 bg-BarkingAtTheMoon-500 transition-all duration-300"></span>
@@ -62,3 +108,4 @@ import logo from "../assets/images/logo.webp";
     });
   });
 </script>
+

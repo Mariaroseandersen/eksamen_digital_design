@@ -20,7 +20,11 @@ import skin from "../assets/images/skin.svg";
     <h3 class="pb-4 md:pb-8 text-base md:text-2xl font-bold uppercase">DON'T MISS OUT ON TREATS FROM OUR NEWSLETTER</h3>
     <div class="flex items-center bg-GoldenRetriever-500 rounded-full border border-BarkingAtTheMoon-500 px-4 py-2 md:w-full lg:max-w-xl">
       <input type="email" placeholder="Enter your email address" class="flex-grow text-xs md:text-base bg-transparent outline-none border-none text-BarkingAtTheMoon-500" />
-      <Button variant="primary" size="small">Sign Up</Button>
+      <div x-data>
+        <div x-on:click="alert('Thanks for signing up!')">
+          <Button variant="primary" size="small">Sign Up</Button>
+        </div>
+      </div>
     </div>
   </div>
   <div>
@@ -141,3 +145,5 @@ import skin from "../assets/images/skin.svg";
     <Image src={mentions} alt="logos from newspapers" class="w-[500px] h-auto" />
   </div>
 </article> -->
+
+<script src="https://cdn.jsdelivr.net/npm/alpinejs@3.x.x/dist/alpine.min.js" defer></script>

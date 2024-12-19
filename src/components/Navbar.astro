@@ -104,7 +104,7 @@ import logo from "../assets/images/logo.webp";
 <script>
   document.addEventListener("DOMContentLoaded", function () {
     const currentPath = window.location.pathname;
-    const menuItems = document.querySelectorAll("#desktopmenu > ul > li > a"); // Kun links i den øvre menu
+    const menuItems = document.querySelectorAll("#desktopmenu a"); // Vælg alle links i hele menuen
 
     menuItems.forEach((item) => {
       if (item.getAttribute("href") === currentPath) {

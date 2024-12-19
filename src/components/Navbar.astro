@@ -16,29 +16,50 @@ import logo from "../assets/images/logo.webp";
       <ul class="flex gap-custom90 text-base font-poppins text-BarkingAtTheMoon-500">
         <li><a href="/pricing" class="hover:text-BarkingAtTheMoon-400 transition duration-300">Pricing</a></li>
         <li class="relative group" x-data="{ showDropdown: false }">
-          <a href="/themenu" @mouseenter="showDropdown = true" @mouseleave="showDropdown = false" class="hover:text-BarkingAtTheMoon-400 transition duration-300 flex items-center">
+          <a 
+            href="/themenu" 
+            @mouseenter="showDropdown = true" 
+            @mouseleave="showDropdown = false"
+            class="hover:text-BarkingAtTheMoon-400 transition duration-300 flex items-center">
             The Menu <span class="ml-1">&#9662;</span>
           </a>
-
+          
           <!-- Dropdown-menu med hjælp fra chatgbt -->
-          <ul x-show="showDropdown" @mouseenter="showDropdown = true" @mouseleave="showDropdown = false" x-transition class="absolute left-0 mt-0 w-64 bg-GoldenRetriever-500 drop-shadow hidden group-hover:block">
+          <ul 
+            x-show="showDropdown" 
+            @mouseenter="showDropdown = true" 
+            @mouseleave="showDropdown = false"
+            x-transition
+            class="absolute left-0 mt-0 w-64 bg-GoldenRetriever-500 border hidden group-hover:block">
             <li>
-              <a href="/singleview" class="block px-4 py-2 text-BarkingAtTheMoon-500 hover:bg-BarkingAtTheMoon-opacity50 pt- hover:text-BarkingAtTheMoon-500 font-poppins transition"> Tailor-made Dry Food </a>
+              <a href="/singleview" class="block px-4 py-2 text-BarkingAtTheMoon-500 hover:bg-BarkingAtTheMoon-opacity50 hover:text-BarkingAtTheMoon-500 font-poppins transition">
+                Tailor-made Dry Food
+              </a>
             </li>
             <li>
-              <a href="/singleview" class="block px-4 py-2 text-BarkingAtTheMoon-500 hover:bg-BarkingAtTheMoon-opacity50 hover:text-BarkingAtTheMoon-500 font-poppins transition"> Puppy Food </a>
+              <a href="/singleview" class="block px-4 py-2 text-BarkingAtTheMoon-500 hover:bg-BarkingAtTheMoon-opacity50 hover:text-BarkingAtTheMoon-500 font-poppins transition">
+                Puppy Food
+              </a>
             </li>
             <li>
-              <a href="/singleview" class="block px-4 py-2 text-BarkingAtTheMoon-500 hover:bg-BarkingAtTheMoon-opacity50 hover:text-BarkingAtTheMoon-500 font-poppins transition"> Hypo-Allergenic </a>
+              <a href="/singleview" class="block px-4 py-2 text-BarkingAtTheMoon-500 hover:bg-BarkingAtTheMoon-opacity50 hover:text-BarkingAtTheMoon-500 font-poppins transition">
+                Hypo-Allergenic
+              </a>
             </li>
             <li>
-              <a href="/singleview" class="block px-4 py-2 text-BarkingAtTheMoon-500 hover:bg-BarkingAtTheMoon-opacity50 hover:text-BarkingAtTheMoon-500 font-poppins transition"> Sensitive Stomachs </a>
+              <a href="/singleview" class="block px-4 py-2 text-BarkingAtTheMoon-500 hover:bg-BarkingAtTheMoon-opacity50 hover:text-BarkingAtTheMoon-500 font-poppins transition">
+                Sensitive Stomachs
+              </a>
             </li>
             <li>
-              <a href="/singleview" class="block px-4 py-2 text-BarkingAtTheMoon-500 hover:bg-BarkingAtTheMoon-opacity50 hover:text-BarkingAtTheMoon-500 font-poppins transition"> Wet Food </a>
+              <a href="/singleview" class="block px-4 py-2 text-BarkingAtTheMoon-500 hover:bg-BarkingAtTheMoon-opacity50 hover:text-BarkingAtTheMoon-500 font-poppins transition">
+                Wet Food
+              </a>
             </li>
             <li>
-              <a href="/singleview" class="block px-4 py-2 text-BarkingAtTheMoon-500 hover:bg-BarkingAtTheMoon-opacity50 hover:text-BarkingAtTheMoon-500 font-poppins transition"> Senior Dog Food </a>
+              <a href="/singleview" class="block px-4 py-2 text-BarkingAtTheMoon-500 hover:bg-BarkingAtTheMoon-opacity50 hover:text-BarkingAtTheMoon-500 font-poppins transition">
+                Senior Dog Food
+              </a>
             </li>
           </ul>
         </li>
@@ -65,16 +86,59 @@ import logo from "../assets/images/logo.webp";
 
   <!-- Mobilmenu -->
   <nav id="mobilmenu" class="lg:hidden bg-GoldenRetriever-500 pb-14" x-show="showmenu" x-transition>
-    <ul class="flex flex-col items-center gap-16 py-4 text-BarkingAtTheMoon-500 font-poppins">
+    <ul class="flex flex-col items-center gap-4 py-4 text-BarkingAtTheMoon-500 font-poppins">
       <li><a href="/pricing" class="hover:text-BarkingAtTheMoon-400">Home</a></li>
       <li><a href="/pricing" class="hover:text-BarkingAtTheMoon-400">Pricing</a></li>
-      <li><a href="/themenu" class="hover:text-BarkingAtTheMoon-400">The Menu</a></li>
+      <li x-data="{ showDropdown: false }" class="w-full text-center">
+        <button 
+          @click="showDropdown = !showDropdown" 
+          class="flex justify-center items-center w-full px-4 py-2 hover:text-BarkingAtTheMoon-400">
+          The Menu <span class="ml-2" x-text="showDropdown ? '▲' : '▼'"></span>
+        </button>
+        <!-- Dropdown -->
+        <ul 
+          x-show="showDropdown" 
+          x-transition 
+          class="bg-GoldenRetriever-600 text-BarkingAtTheMoon-500 w-full px-4 py-2 space-y-2 text-center">
+          <li>
+            <a href="/singleview" class="block hover:text-BarkingAtTheMoon-400">
+              Tailor-made Dry Food
+            </a>
+          </li>
+          <li>
+            <a href="/singleview" class="block hover:text-BarkingAtTheMoon-400">
+              Puppy Food
+            </a>
+          </li>
+          <li>
+            <a href="/singleview" class="block hover:text-BarkingAtTheMoon-400">
+              Hypo-Allergenic
+            </a>
+          </li>
+          <li>
+            <a href="/singleview" class="block hover:text-BarkingAtTheMoon-400">
+              Sensitive Stomachs
+            </a>
+          </li>
+          <li>
+            <a href="/singleview" class="block hover:text-BarkingAtTheMoon-400">
+              Wet Food
+            </a>
+          </li>
+          <li>
+            <a href="/singleview" class="block hover:text-BarkingAtTheMoon-400">
+              Senior Dog Food
+            </a>
+          </li>
+        </ul>
+      </li>
       <li><a href="#" class="hover:text-BarkingAtTheMoon-400">Our Story</a></li>
       <li><a href="/form" class="hover:text-BarkingAtTheMoon-400">Get Started</a></li>
     </ul>
   </nav>
 </div>
 
+<!-- Script to add active class based on current URL -->
 <script>
   document.addEventListener("DOMContentLoaded", function () {
     const currentPath = window.location.pathname;

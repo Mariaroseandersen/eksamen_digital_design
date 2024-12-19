@@ -9,7 +9,7 @@ import Reviewscard from "../components/Reviewscard.astro";
 
 <section class="mx-5 md:mx-custom104 mb-12">
   <h2 class="text-2xl md:text-custom54 font-paytone md:max-w-3xl pb-6 md:pb-8 uppercase animationinviewfade">Dogs Love Us, Yours Will Too</h2>
-  <p class="text-sm md:text-xl pb-8 md:pb-16 md:max-w-2xl animationinviewfade">With 19,000 Trustpilot reviews and 145,000 dogs enjoying 8 million meals monthly, we think you and your dog will love us too.</p>
+  <p class="text-sm md:text-xl pb-8 md:pb-16 max-w-xl md:max-w-2xl animationinviewfade">With 19,000 Trustpilot reviews and 145,000 dogs enjoying 8 million meals monthly, we think you and your dog will love us too.</p>
 
   <article class="sm:grid sm:grid-cols-2 md:grid-cols-3 gap-12">
     <Reviewscard cardimage="/buster.webp" cardimagealt="picture of buster the dog" cardname="Buster" dogbreed="2 y/o, Labrador Retriever" dogreview="“I can’t believe the difference since switching to this food. Buster’s coat is shinier, and he’s full of energy. Plus, the delivery is so convenient — I never worry about running out!”" />
@@ -31,7 +31,7 @@ import Reviewscard from "../components/Reviewscard.astro";
         <p class="text-sm md:text-xl">Trustpilot</p>
       </div>
       <p class="text-sm md:text-xl pb-6 md:pb-12 font-bold">And we would love to hear from you too!</p>
-      <Button variant="subprimary" size="small">Leave a Review</Button>
+      <a href="https://dk.trustpilot.com/review/tails.com"><Button variant="subprimary" size="small">Leave a Review</Button></a>
     </article>
     <article class="mt-3 md:mt-0 flex items-end justify-center">
       <Image src={doglick} alt="image of dog licking screen" class="w-[300px] md:w-[400px]" />

@@ -103,11 +103,12 @@ import logo from "../assets/images/logo.webp";
 <!-- Script to add active class based on current URL -->
 <script>
   document.addEventListener("DOMContentLoaded", function () {
-    const currentPath = window.location.pathname;
-    const menuItems = document.querySelectorAll("#desktopmenu a"); // Vælg alle links i hele menuen
+    const currentPath = window.location.pathname.replace(/\/$/, ""); // Fjern trailing slash
+    const menuItems = document.querySelectorAll("#desktopmenu a");
 
     menuItems.forEach((item) => {
-      if (item.getAttribute("href") === currentPath) {
+      const itemPath = item.getAttribute("href").replace(/\/$/, ""); // Fjern trailing slash
+      if (itemPath === currentPath) {
         item.classList.add("border-b-2", "border-BarkingAtTheMoon-500");
       }
     });

@@ -96,7 +96,6 @@ import logo from "../assets/images/logo.webp";
   </nav>
 </div>
 
-<!-- Script to add active class based on current URL -->
 <script>
   document.addEventListener("DOMContentLoaded", function () {
     const currentPath = window.location.pathname;
@@ -104,7 +103,7 @@ import logo from "../assets/images/logo.webp";
 
     menuItems.forEach((item) => {
       if (item.getAttribute("href") === currentPath) {
-        item.classList.add("border-b-2", "border-BarkingAtTheMoon-500");
+        item.classList.add("border-BarkingAtTheMoon-500");
       }
     });
   });

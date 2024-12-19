@@ -4,9 +4,7 @@ import logo from "../assets/images/logo.webp";
 ---
 
 <div x-data="{ showmenu: false }" class="w-full bg-GoldenRetriever-500">
-  <!-- Navbar Container -->
   <div class="flex items-center justify-between px-6 md:px-16 py-6">
-    <!-- Logo (Venstre) -->
     <div id="logo">
       <a href="/" class="flex items-center">
         <Image class="w-auto h-12" src={logo} alt="Logo" />
@@ -50,3 +48,17 @@ import logo from "../assets/images/logo.webp";
     </ul>
   </nav>
 </div>
+
+<!-- Script to add active class based on current URL -->
+<script>
+  document.addEventListener("DOMContentLoaded", function () {
+    const currentPath = window.location.pathname;
+    const menuItems = document.querySelectorAll("#desktopmenu a, #mobilmenu a");
+
+    menuItems.forEach((item) => {
+      if (item.getAttribute("href") === currentPath) {
+        item.classList.add("border-b-2", "border-BarkingAtTheMoon-500");
+      }
+    });
+  });
+</script>

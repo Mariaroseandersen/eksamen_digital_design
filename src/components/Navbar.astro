@@ -23,15 +23,16 @@ import logo from "../assets/images/logo.webp";
             class="hover:text-BarkingAtTheMoon-400 transition duration-300 flex items-center">
             The Menu <span class="ml-1">&#9662;</span>
           </a>
+          
           <!-- Dropdown-menu med hjælp fra chatgbt -->
           <ul 
             x-show="showDropdown" 
             @mouseenter="showDropdown = true" 
             @mouseleave="showDropdown = false"
             x-transition
-            class="absolute left-0 mt-2 w-64 bg-GoldenRetriever-500 border hidden group-hover:block">
+            class="absolute left-0 mt-0 w-64 bg-GoldenRetriever-500 border hidden group-hover:block">
             <li>
-              <a href="/singleview" class="block px-4 py-2 text-BarkingAtTheMoon-500 hover:bg-BarkingAtTheMoon-opacity50 hover:text-BarkingAtTheMoon-500 font-poppins transition">
+              <a href="/singleview" class="block px-4 py-2 text-BarkingAtTheMoon-500 hover:bg-BarkingAtTheMoon-opacity50 pt-8 hover:text-BarkingAtTheMoon-500 font-poppins transition">
                 Tailor-made Dry Food
               </a>
             </li>

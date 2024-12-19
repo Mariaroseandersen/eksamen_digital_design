@@ -16,6 +16,7 @@ import logo from "../assets/images/logo.webp";
     <!-- Desktop Menu (Centreret) -->
     <nav id="desktopmenu" class="absolute left-1/2 transform -translate-x-1/2 hidden lg:block">
       <ul class="flex gap-custom90 text-base font-poppins text-BarkingAtTheMoon-500">
+        <li><a href="/pricing" class="hover:text-BarkingAtTheMoon-400 transition duration-300">Home</a></li>
         <li><a href="/pricing" class="hover:text-BarkingAtTheMoon-400 transition duration-300">Pricing</a></li>
         <li><a href="/themenu" class="hover:text-BarkingAtTheMoon-400 transition duration-300">The Menu</a></li>
         <li><a href="/ourstory" class="hover:text-BarkingAtTheMoon-400 transition duration-300">Our Story</a></li>
@@ -40,8 +41,9 @@ import logo from "../assets/images/logo.webp";
   </div>
 
   <!-- Mobilmenu -->
-  <nav id="mobilmenu" class="lg:hidden bg-GoldenRetriever-500" x-show="showmenu" x-transition>
-    <ul class="flex flex-col items-center gap-6 py-4 text-BarkingAtTheMoon-500 font-poppins">
+  <nav id="mobilmenu" class="lg:hidden bg-GoldenRetriever-500 pb-14" x-show="showmenu" x-transition>
+    <ul class="flex flex-col items-center gap-16 py-4 text-BarkingAtTheMoon-500 font-poppins">
+      <li><a href="/pricing" class="hover:text-BarkingAtTheMoon-400">Home</a></li>
       <li><a href="/pricing" class="hover:text-BarkingAtTheMoon-400">Pricing</a></li>
       <li><a href="/themenu" class="hover:text-BarkingAtTheMoon-400">The Menu</a></li>
       <li><a href="/ourstory" class="hover:text-BarkingAtTheMoon-400">Our Story</a></li>
